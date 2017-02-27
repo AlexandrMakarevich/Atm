@@ -1,7 +1,6 @@
 package com.home.atm.command;
 
-import java.util.HashMap;
-import java.util.Map;
+
 import java.util.Objects;
 
 public class AddCommand implements Command {
@@ -15,7 +14,8 @@ public class AddCommand implements Command {
 
 	public void execute(Storage storage) {
 		storage.addAmount(currency, amount);
-		
+		String formattedString = String.format(" Добавили %d  в валюте %s ",amount, currency );
+		System.out.println(formattedString);
 	}
 
 	@Override
