@@ -1,6 +1,8 @@
 package com.home.atm.command;
 
 
+import com.home.atm.storage.Storage;
+
 import java.util.Objects;
 
 public class AddCommand implements Command {
@@ -13,9 +15,18 @@ public class AddCommand implements Command {
 	}
 
 	public void execute(Storage storage) {
-		storage.addAmount(currency, amount);
-		String formattedString = String.format(" Добавили %d  в валюте %s ",amount, currency );
-		System.out.println(formattedString);
+		Integer currentValue = storage.getStorage().get(currency);
+		if(currentValue == null) {
+			storage.getStorage().put(currency, amount);
+			String formattedString = String.format(" Добавили %d  в валюте %s ", amount, currency);
+			System.out.println(formattedString);
+		}
+		else {
+			storage.getStorage().put(currency, amount + currentValue);
+			Integer currentValue2 = storage.getStorage().get(currency);
+			String formattedString = String.format("Было : %d  Стало %d  в валюте %s ",currentValue, currentValue2 , currency);
+			System.out.println(formattedString);
+		}
 	}
 
 	@Override

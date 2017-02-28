@@ -1,4 +1,4 @@
-package com.home.atm.command;
+package com.home.atm.storage;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -6,11 +6,9 @@ import java.util.Map;
 public class Storage {
 	
 	private Map<String, Integer> storage = new HashMap<>();
-	
 
-	public void addAmount(String currency, int amount) {
-		storage.put(currency, amount);
-	
+	public Map<String, Integer> getStorage() {
+		return storage;
 	}
 
 }
