@@ -20,7 +20,7 @@ public class InputParser {
 			Integer amount = Integer.parseInt(m.group(2));
 			return new AddCommand(currency, amount);
 		}
-		throw new IllegalArgumentException("Не допустимая команда :" + inputString );
+		throw new IllegalArgumentException("Не допустимая команда : " + inputString );
 		 
 	}
 
