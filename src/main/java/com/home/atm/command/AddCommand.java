@@ -1,8 +1,6 @@
 package com.home.atm.command;
 
-
 import com.home.atm.storage.Storage;
-
 import java.util.Objects;
 
 public class AddCommand implements Command {
@@ -14,6 +12,7 @@ public class AddCommand implements Command {
 		this.amount = amount;
 	}
 
+	@Override
 	public void execute(Storage storage) {
 		Integer currentValue = storage.getStorage().get(currency);
 		if(currentValue == null) {
@@ -54,8 +53,5 @@ public class AddCommand implements Command {
 				.append(", amount=").append(amount).append("]");
 		return builder.toString();
 	}
-
-	
-	
 
 }
