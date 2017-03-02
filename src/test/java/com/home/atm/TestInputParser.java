@@ -1,6 +1,7 @@
 package com.home.atm;
 
 import com.home.atm.command.ExitCommand;
+import com.home.atm.command.PrintBalanceCommand;
 import org.junit.Assert;
 import org.junit.Test;
 import com.home.atm.command.AddCommand;
@@ -23,6 +24,16 @@ public class TestInputParser {
 	@Test
 	public void testExitCommand() {
 		executeAndAssert("exit", new ExitCommand());
+	}
+
+	@Test
+	public void testPrintAllCurrencies() {
+		executeAndAssert("balance", new PrintBalanceCommand(null));
+	}
+
+	@Test
+	public void testPrintSpecifiedCurrency() {
+		executeAndAssert("balance RUB", new PrintBalanceCommand("RUB"));
 	}
 
 }
