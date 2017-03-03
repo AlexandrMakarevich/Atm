@@ -4,6 +4,7 @@ import com.home.atm.storage.Storage;
 import java.util.Objects;
 
 public class AddCommand implements Command {
+
 	private String currency;
 	private int amount;
 	
@@ -15,9 +16,9 @@ public class AddCommand implements Command {
 	@Override
 	public void execute(Storage storage) {
 		Integer currentValue = storage.getStorage().get(currency);
-		if(currentValue == null) {
+		if (currentValue == null) {
 			storage.getStorage().put(currency, amount);
-			String formattedString = String.format(" Добавили %d  в валюте %s ", amount, currency);
+			String formattedString = String.format("Добавили %d  в валюте %s ", amount, currency);
 			System.out.println(formattedString);
 		}
 		else {
