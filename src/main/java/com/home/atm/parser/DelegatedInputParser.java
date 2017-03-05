@@ -10,7 +10,10 @@ public class DelegatedInputParser {
 
     public DelegatedInputParser() {
        inputParsers = new ArrayList<>();
-        inputParsers.add( new ExitParser());
+        inputParsers.add(new ExitParser());
+        inputParsers.add(new PrintParser());
+        inputParsers.add(new AddParser());
+        inputParsers.add(new WithdrawParser());
     }
 
     public Command parseInput(String inputString) {
