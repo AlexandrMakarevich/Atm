@@ -4,6 +4,6 @@ import com.home.atm.storage.Storage;
 
 public interface Command {
 	
-	public void execute(Storage storage);
+	 void execute(Storage storage);
 
 }

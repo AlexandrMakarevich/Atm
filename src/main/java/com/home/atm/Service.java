@@ -1,13 +1,14 @@
 package com.home.atm;
 
 import com.home.atm.command.Command;
+import com.home.atm.parser.DelegatedInputParser;
 import com.home.atm.storage.Storage;
 
 import java.util.Scanner;
 
 public class Service {
 
-    private InputParser inputPars = new InputParser();
+    private DelegatedInputParser inputPars = new DelegatedInputParser();
     private Storage storage;
 
     public Service(Storage storage) {
