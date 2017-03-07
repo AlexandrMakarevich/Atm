@@ -16,7 +16,7 @@ public class DelegatedInputParser {
         inputParsers.add(new WithdrawParser());
     }
 
-    public Command parseInput(String inputString) {
+    public Command defaultParseInput(String inputString) {
        for (InputParser inputParser : inputParsers ) {
           if (inputParser.commandMatch(inputString)) {
              return inputParser.parseInput(inputString);

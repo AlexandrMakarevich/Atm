@@ -3,7 +3,6 @@ package com.home.atm;
 import com.home.atm.command.Command;
 import com.home.atm.parser.DelegatedInputParser;
 import com.home.atm.storage.Storage;
-
 import java.util.Scanner;
 
 public class Service {
@@ -23,7 +22,7 @@ public class Service {
     }
 
     public void processInput(String inputString ) {
-        Command command = inputPars.parseInput(inputString);
+        Command command = inputPars.defaultParseInput(inputString);
         command.execute(storage);
     }
 }
