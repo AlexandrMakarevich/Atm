@@ -11,7 +11,11 @@ public class ExitParser implements InputParser {
 
     @Override
     public Command parseInput(String inputString) {
+        Matcher exit = exitPattern.matcher(inputString);
+        if( exit.matches()){
             return new ExitCommand();
+        }
+        throw new IllegalArgumentException("Не допустимая команда : " + inputString );
     }
 
     @Override

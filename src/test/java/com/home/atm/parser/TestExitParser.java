@@ -5,7 +5,7 @@ import com.home.atm.command.ExitCommand;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestExitParser {
+public class TestExitParser extends AbstractInputParserTest{
 
     ExitParser exitParser = new ExitParser();
 
@@ -17,5 +17,10 @@ public class TestExitParser {
     @Test
     public void testAddUSD100() {
         executeAndAssert("exit", new ExitCommand());
+    }
+
+    @Override
+    public InputParser getParser() {
+        return exitParser;
     }
 }
