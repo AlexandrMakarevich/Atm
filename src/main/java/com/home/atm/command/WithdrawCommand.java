@@ -1,12 +1,14 @@
 package com.home.atm.command;
 
 import com.home.atm.storage.Storage;
+import org.apache.log4j.Logger;
 import java.util.Objects;
 
 public class WithdrawCommand implements Command {
 
     private String currency;
     private int amount;
+    private static final Logger LOGGER = Logger.getLogger(WithdrawCommand.class);
 
     public WithdrawCommand(String currency, int amount) {
         this.currency = currency;
@@ -26,12 +28,14 @@ public class WithdrawCommand implements Command {
            return;
         }
         storage.getStorage().put (currency, balance);
-        String formattedString = String.format("На вашем счету %d в валюте %s",balance, currency );
+        String formattedString = String.format("С вашего счета снято %d %s .На вашем счету %d %s ",amount, currency, balance, currency );
         System.out.println(formattedString);
+        LOGGER.info(formattedString);
     }
 
     public void printZero() {
         System.out.println("Нет средств на счету!");
+        LOGGER.info("Нет средств на счету!");
     }
 
     @Override

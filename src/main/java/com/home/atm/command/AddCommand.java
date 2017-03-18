@@ -1,13 +1,14 @@
 package com.home.atm.command;
 
 import com.home.atm.storage.Storage;
-
+import org.apache.log4j.Logger;
 import java.util.Objects;
 
 public class AddCommand implements Command {
 
 	private String currency;
 	private int amount;
+	private static final Logger LOGGER = Logger.getLogger(AddCommand.class);
 	
 	public AddCommand(String currency, int amount) {
 		this.currency = currency;
@@ -25,13 +26,14 @@ public class AddCommand implements Command {
 		else {
 			storage.getStorage().put(currency, amount + currentValue);
 			Integer currentValue2 = storage.getStorage().get(currency);
-			String formattedString = String.format("Было : %d  Стало %d  в валюте %s ",currentValue, currentValue2 , currency);
+			String formattedString = String.format("Добавили %d %s . На вашем счету %d %s ",amount, currency, currentValue2 , currency);
 			print(formattedString);
 		}
 	}
 
 	private void print(String input) {
 		System.out.println(input);
+		LOGGER.info(input);
 	}
 
 	@Override
@@ -59,5 +61,4 @@ public class AddCommand implements Command {
 				.append(", amount=").append(amount).append("]");
 		return builder.toString();
 	}
-
 }

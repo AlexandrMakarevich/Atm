@@ -32,17 +32,39 @@
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.0.2</version>
-        <configuration>
-          <archive>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <mainClass>com.home.atm.AtmLauncher</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
+        <artifactId>maven-shade-plugin</artifactId>
+        <version>2.3</version>
+        <executions>
+          <!-- Run shade goal on package phase -->
+          <execution>
+            <phase>package</phase>
+            <goals>
+              <goal>shade</goal>
+            </goals>
+            <configuration>
+              <transformers>
+                <!-- add Main-Class to manifest file -->
+                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                  <mainClass>com.home.atm.AtmLauncher</mainClass>
+                </transformer>
+              </transformers>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
+      <!--<plugin>-->
+        <!--<groupId>org.apache.maven.plugins</groupId>-->
+        <!--<artifactId>maven-jar-plugin</artifactId>-->
+        <!--<version>3.0.2</version>-->
+        <!--<configuration>-->
+          <!--<archive>-->
+            <!--<manifest>-->
+              <!--<addClasspath>true</addClasspath>-->
+              <!--<mainClass>com.home.atm.AtmLauncher</mainClass>-->
+            <!--</manifest>-->
+          <!--</archive>-->
+        <!--</configuration>-->
+      <!--</plugin>-->
     </plugins>
   </build>
 

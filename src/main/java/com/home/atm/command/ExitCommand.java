@@ -2,11 +2,13 @@ package com.home.atm.command;
 
 import com.home.atm.storage.Storage;
 import com.home.atm.storage.StorageSaver;
+import org.apache.log4j.Logger;
 import java.io.FileNotFoundException;
 
 public class ExitCommand implements Command {
 
     private StorageSaver storageSever = new StorageSaver();
+    private static final Logger LOGGER = Logger.getLogger(ExitCommand.class);
 
     @Override
     public void execute(Storage storage) {
@@ -15,6 +17,7 @@ public class ExitCommand implements Command {
        }
        catch(FileNotFoundException ex) {
            System.out.println("Ошибка сохранения файла " + ex.getMessage());
+           LOGGER.warn("Ошибка сохранения файла ", ex);
        }
         System.out.println("Получил команду выйти.");
         System.exit(0);

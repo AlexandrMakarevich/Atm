@@ -1,12 +1,14 @@
 package com.home.atm.command;
 
 import com.home.atm.storage.Storage;
+import org.apache.log4j.Logger;
 import java.util.Map;
 import java.util.Objects;
 
 public class PrintBalanceCommand implements Command {
 
     private String currency;
+    private static final Logger LOGGER = Logger.getLogger(PrintBalanceCommand.class);
 
     public PrintBalanceCommand(String currency) {
         this.currency = currency;
@@ -33,6 +35,7 @@ public class PrintBalanceCommand implements Command {
 
     public void print(String inputKey, Integer inputValue) {
         System.out.printf("Ваш баланс составляет %d в валюте %s \n",inputValue,inputKey);
+        LOGGER.info("Ваш баланс составляет " + inputValue + " в валюте " + inputKey);
     }
 
     @Override
