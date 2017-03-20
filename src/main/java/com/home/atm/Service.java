@@ -7,11 +7,12 @@ import java.util.Scanner;
 
 public class Service {
 
-    private DelegatedInputParser inputPars = new DelegatedInputParser();
+    private DelegatedInputParser inputPars;
     private Storage storage;
 
-    public Service(Storage storage) {
+    public Service(Storage storage, String fileName) {
         this.storage = storage;
+        inputPars = new DelegatedInputParser(fileName);
     }
 
     public void procesInput() {

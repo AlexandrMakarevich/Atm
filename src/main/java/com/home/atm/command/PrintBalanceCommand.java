@@ -28,6 +28,10 @@ public class PrintBalanceCommand implements Command {
     }
 
     public void printAllCurrencies(Storage storage) {
+        if (storage.getStorage().isEmpty()) {
+            System.out.println("Account is empty");
+            return;
+        }
         for (Map.Entry<String, Integer> entry : storage.getStorage().entrySet()) {
             print( entry.getKey(),entry.getValue());
         }

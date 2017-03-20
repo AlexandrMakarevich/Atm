@@ -8,11 +8,15 @@ import java.util.Map;
 
 public class StorageSaver {
 
-   public static final String FILENAME = "Storage.txt";
+    public  String fileName;
     private static final Logger LOGGER = Logger.getLogger(StorageSaver.class);
 
+    public StorageSaver (String fileName) {
+        this.fileName = fileName;
+    }
+
     public void writeData(Storage storage) throws FileNotFoundException {
-        File file  = new File(FILENAME);
+        File file  = new File(fileName);
         PrintWriter pwt = new PrintWriter(file);
         for (Map.Entry<String, Integer> entry : storage.getStorage().entrySet()) {
             pwt.format("%s %d\n", entry.getKey(), entry.getValue());

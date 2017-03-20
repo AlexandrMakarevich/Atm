@@ -7,7 +7,9 @@ import org.junit.Test;
 
 public class TestExitParser extends AbstractInputParserTest{
 
-    ExitParser exitParser = new ExitParser();
+    private String name = "NotRelevant";
+
+    ExitParser exitParser = new ExitParser(name);
 
     public void executeAndAssert(String inputString, Command expectedResult) {
         Command actualResult = exitParser.parseInput(inputString);
@@ -16,7 +18,7 @@ public class TestExitParser extends AbstractInputParserTest{
 
     @Test
     public void testAddUSD100() {
-        executeAndAssert("exit", new ExitCommand());
+        executeAndAssert("exit", new ExitCommand(name));
     }
 
     @Override

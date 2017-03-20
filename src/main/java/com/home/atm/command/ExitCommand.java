@@ -7,8 +7,12 @@ import java.io.FileNotFoundException;
 
 public class ExitCommand implements Command {
 
-    private StorageSaver storageSever = new StorageSaver();
+    private StorageSaver storageSever ;
     private static final Logger LOGGER = Logger.getLogger(ExitCommand.class);
+
+    public ExitCommand (String fileName) {
+       storageSever = new StorageSaver(fileName);
+    }
 
     @Override
     public void execute(Storage storage) {

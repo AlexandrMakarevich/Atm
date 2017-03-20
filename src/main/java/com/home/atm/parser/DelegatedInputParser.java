@@ -8,9 +8,9 @@ public class DelegatedInputParser {
 
     private List<InputParser> inputParsers;
 
-    public DelegatedInputParser() {
-       inputParsers = new ArrayList<>();
-        inputParsers.add(new ExitParser());
+    public DelegatedInputParser(String fileName) {
+        inputParsers = new ArrayList<>();
+        inputParsers.add(new ExitParser(fileName));
         inputParsers.add(new PrintParser());
         inputParsers.add(new AddParser());
         inputParsers.add(new WithdrawParser());
