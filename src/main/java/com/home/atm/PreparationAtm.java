@@ -7,22 +7,21 @@ import java.io.FileNotFoundException;
 
 public class PreparationAtm {
 
-    private StorageLoader storageLoader = new StorageLoader();
+    private static StorageLoader storageLoader = new StorageLoader();
     private static final Logger LOGGER = Logger.getLogger(AtmLauncher.class);
-    private static final String DEFAULT_FILE_NAME = "Default.txt";
 
     public void argumentsRun(String args) throws FileNotFoundException {
-         Storage stor = storageLoader.loadStorage(args);
-       process(stor, args);
+        Storage storage = storageLoader.loadStorage(args);
+        process(storage);
     }
 
     public void createNewAccount() {
         Storage storage = new Storage();
-       process(storage, DEFAULT_FILE_NAME);
+        process(storage);
     }
 
-    private void process(Storage stor, String filename) {
-        Service service = new Service(stor, filename);
+    public void process(Storage storage) {
+        Service service = new Service(storage);
         for (; ; ) {
             try {
                 service.procesInput();
