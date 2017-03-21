@@ -5,18 +5,13 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Map;
-import static com.home.atm.storage.StorageLoader.threadLocal;
 
 public class StorageSaver {
-    private final String FILENAME;
+    public static String filename = "Save_account.txt";
     private static final Logger LOGGER = Logger.getLogger(StorageSaver.class);
 
-    public StorageSaver () {
-        FILENAME = threadLocal.get();
-    }
-
     public void writeData(Storage storage) throws FileNotFoundException {
-        File file  = new File(FILENAME);
+        File file  = new File(filename);
         PrintWriter pwt = new PrintWriter(file);
         for (Map.Entry<String, Integer> entry : storage.getStorage().entrySet()) {
             pwt.format("%s %d\n", entry.getKey(), entry.getValue());
