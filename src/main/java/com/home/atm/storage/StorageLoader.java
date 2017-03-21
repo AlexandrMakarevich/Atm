@@ -9,6 +9,7 @@ import java.util.Scanner;
 
 public class StorageLoader {
 
+    public static ThreadLocal<String> threadLocal = new ThreadLocal<>();
     private static final Logger LOGGER = Logger.getLogger(StorageLoader.class);
 
     public Storage loadStorage(String fileName) throws FileNotFoundException {

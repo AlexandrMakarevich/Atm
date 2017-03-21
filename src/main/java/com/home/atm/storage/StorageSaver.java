@@ -5,11 +5,15 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Map;
+import static com.home.atm.storage.StorageLoader.threadLocal;
 
 public class StorageSaver {
-
-   public static final String FILENAME = "Storage.txt";
+    private final String FILENAME;
     private static final Logger LOGGER = Logger.getLogger(StorageSaver.class);
+
+    public StorageSaver () {
+        FILENAME = threadLocal.get();
+    }
 
     public void writeData(Storage storage) throws FileNotFoundException {
         File file  = new File(FILENAME);
