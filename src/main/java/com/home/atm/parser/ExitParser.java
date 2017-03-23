@@ -8,17 +8,12 @@ import java.util.regex.Pattern;
 public class ExitParser implements InputParser {
 
     private Pattern exitPattern = Pattern.compile("^exit$");
-    private String fileName;
-
-    public ExitParser(String fileName) {
-        this.fileName = fileName;
-    }
 
     @Override
     public Command parseInput(String inputString) {
         Matcher exit = exitPattern.matcher(inputString);
         if( exit.matches()){
-            return new ExitCommand(fileName);
+            return new ExitCommand();
         }
         throw new IllegalArgumentException("Не допустимая команда : " + inputString );
     }

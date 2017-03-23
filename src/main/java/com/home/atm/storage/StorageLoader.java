@@ -10,9 +10,10 @@ import java.util.Scanner;
 public class StorageLoader {
 
     private static final Logger LOGGER = Logger.getLogger(StorageLoader.class);
+    public static final String ACCOUNT_DIRECTORY = System.getenv("ACCOUNT_REPOSITORY");
 
     public Storage loadStorage(String fileName) throws FileNotFoundException {
-        File file  = new File(fileName);
+        File file  = new File(ACCOUNT_DIRECTORY, fileName);
         Scanner scanner = new Scanner(file);
         Map<String, Integer> map = new HashMap<>();
         while (scanner.hasNextLine()) {

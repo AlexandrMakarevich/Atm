@@ -10,8 +10,8 @@ public class ExitCommand implements Command {
     private StorageSaver storageSever ;
     private static final Logger LOGGER = Logger.getLogger(ExitCommand.class);
 
-    public ExitCommand (String fileName) {
-       storageSever = new StorageSaver(fileName);
+    public ExitCommand() {
+       storageSever = new StorageSaver();
     }
 
     @Override

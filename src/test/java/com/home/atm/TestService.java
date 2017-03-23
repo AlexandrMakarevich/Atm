@@ -12,13 +12,12 @@ public class TestService {
     private Service service;
     private String usdCurrency = "USD";
     private String rubCurrency = "RUB";
-    private String name = "NotRelevant";
 
     @Test
     public void testAddRub100() {
         Integer firstAmount = 100;
         Storage storage = new Storage();
-        service = new Service(storage, name);
+        service = new Service(storage);
         service.processInput(String.format("+ %s %d", rubCurrency, firstAmount));
         Integer actualResult = storage.getStorage().get(rubCurrency);
         Assert.assertEquals("Actual result must be expected", firstAmount, actualResult);
@@ -28,7 +27,7 @@ public class TestService {
     public void addSameCurrencyTwice() {
         Integer firstAmount = 130;
         Storage storage = new Storage();
-        service = new Service(storage, name);
+        service = new Service(storage);
         service.processInput(String.format("+ %s %d", rubCurrency, firstAmount));
         service.processInput(String.format("+ %s %d", rubCurrency, firstAmount));
         Integer actualResult = storage.getStorage().get(rubCurrency);
@@ -41,7 +40,7 @@ public class TestService {
         Integer firstAmount = 130;
         Integer secondAmount = 30;
         Storage storage = new Storage();
-        service = new Service(storage, name);
+        service = new Service(storage);
         service.processInput(String.format("+ %s %d", usdCurrency,firstAmount));
         service.processInput(String.format("- %s %d", usdCurrency,secondAmount));
         Integer actualResult = storage.getStorage().get(usdCurrency);
@@ -54,7 +53,7 @@ public class TestService {
         Integer firstAmount = 0;
         Integer secondAmount = 100;
         Storage storage = new Storage();
-        service = new Service(storage, name);
+        service = new Service(storage);
         service.processInput(String.format("+ %s %d", usdCurrency,firstAmount));
         service.processInput(String.format("- %s %d", usdCurrency,secondAmount));
         service.processInput(String.format("+ %s %d", usdCurrency,firstAmount));
@@ -65,7 +64,7 @@ public class TestService {
         Integer firstAmount = 200;
         Integer secondAmount = 600;
         Storage storage = new Storage();
-        service = new Service(storage, name);
+        service = new Service(storage);
         service.processInput(String.format("+ %s %d", usdCurrency, firstAmount));
         service.processInput(String.format("+ %s %d", rubCurrency, secondAmount));
         service.processInput(String.format("+ %s %d", usdCurrency, firstAmount));
@@ -78,7 +77,7 @@ public class TestService {
         ByteArrayOutputStream bo = new ByteArrayOutputStream();
         System.setOut(new PrintStream(bo));
         Storage storage = new Storage();
-        service = new Service(storage, name);
+        service = new Service(storage);
         service.processInput("- USD 50");
         bo.flush();
         String allWrittenLines = new String(bo.toByteArray());
