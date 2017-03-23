@@ -12,7 +12,7 @@ public class StorageSaver {
     private static final Logger LOGGER = Logger.getLogger(StorageSaver.class);
 
     public void writeData(Storage storage) throws FileNotFoundException {
-        File file  = new File(ACCOUNT_DIRECTORY, filename);
+        File file  = new File(filename);
         PrintWriter pwt = new PrintWriter(file);
         for (Map.Entry<String, Integer> entry : storage.getStorage().entrySet()) {
             pwt.format("%s %d\n", entry.getKey(), entry.getValue());
