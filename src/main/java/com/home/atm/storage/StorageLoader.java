@@ -10,7 +10,6 @@ import java.util.Scanner;
 public class StorageLoader {
 
     private static final Logger LOGGER = Logger.getLogger(StorageLoader.class);
-    public static final String ACCOUNT_DIRECTORY = System.getenv("ACCOUNT_REPOSITORY");
 
     public Storage loadStorage(String fileName) throws FileNotFoundException {
         File file = new File(fileName);

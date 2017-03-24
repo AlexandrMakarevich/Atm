@@ -3,28 +3,39 @@ package com.home.atm.storageLoader;
 import com.home.atm.storage.Storage;
 import com.home.atm.storage.StorageLoader;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import java.io.FileNotFoundException;
-import java.util.HashMap;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class TestStorageLoader {
-    //TODO: use @Before
-    StorageLoader storageLoader = new StorageLoader();
+
+    private StorageLoader storageLoader;
+
+    @Before
+    public void init() {
+        storageLoader = new StorageLoader();
+    }
 
     @Test
     public void testLoadStorage() throws FileNotFoundException {
-        Map<String, Integer> map = new HashMap<>();
-        map.put("RUB",84844 );
-        map.put("USD", 100);
-        map.put("EUR", 300);
-        Map<String, Integer> map2 = new HashMap<>();
-        map2.put("RUB1", 848);
-        map2.put("USD1", 200);
-        Map<String, Map<String, Integer>> map1 = new HashMap<>();
-        map1.put("Petrov", map);
-        map1.put("Petrov2",map2);
         Storage actualResult = storageLoader.loadStorage("src/test/resources/Storage.txt");
-        Assert.assertEquals("ActualResult must be expected", map1, actualResult.getAccountStorage());
+        Assert.assertEquals("ActualResult must be expected", createStorage().getAccountStorage(), actualResult.getAccountStorage());
     }
+
+    public Storage createStorage() {
+        Map<String, Integer> petrov = new TreeMap<>();
+        petrov.put("RUB", 84844);
+        petrov.put("USD", 100);
+        petrov.put("EUR", 300);
+        Map<String, Integer> petrov2 = new TreeMap<>();
+        petrov2.put("RUB1", 848);
+        petrov2.put("USD1", 200);
+        Map<String, Map<String, Integer>> account = new TreeMap<>();
+        account.put("Petrov", petrov);
+        account.put("Petrov2", petrov2);
+        return new Storage(account);
+    }
+
 }
