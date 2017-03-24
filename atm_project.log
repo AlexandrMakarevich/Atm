@@ -1,0 +1,150 @@
+2017-03-22 21:32:45 INFO  StorageLoader:23 - Loaded from D:\Husband\Git\Atm\Petrov.txt:{USD=299}
+2017-03-22 21:32:53 INFO  PrintBalanceCommand:42 - Р’Р°С€ Р±Р°Р»Р°РЅСЃ СЃРѕСЃС‚Р°РІР»СЏРµС‚ 299 РІ РІР°Р»СЋС‚Рµ USD
+2017-03-22 21:35:13 INFO  StorageSaver:21 - {USD=299} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Petrov.txt
+2017-03-22 21:35:33 INFO  StorageLoader:23 - Loaded from D:\Husband\Git\Atm\Petrov.txt:{USD=299}
+2017-03-22 21:35:39 INFO  PrintBalanceCommand:42 - Р’Р°С€ Р±Р°Р»Р°РЅСЃ СЃРѕСЃС‚Р°РІР»СЏРµС‚ 299 РІ РІР°Р»СЋС‚Рµ USD
+2017-03-22 21:37:10 INFO  StorageSaver:22 - {USD=299} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Petrov.txt
+2017-03-22 21:55:29 INFO  StorageLoader:23 - Loaded from D:\Husband\AccountRepository\Petrov.txt:{}
+2017-03-22 21:56:28 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 200  РІ РІР°Р»СЋС‚Рµ USD 
+2017-03-22 21:56:46 INFO  StorageSaver:21 - {USD=200} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\AccountRepository\Petrov.txt
+2017-03-22 21:57:47 INFO  StorageLoader:23 - Loaded from D:\Husband\AccountRepository\Petrov.txt:{USD=200}
+2017-03-22 21:57:52 INFO  PrintBalanceCommand:42 - Р’Р°С€ Р±Р°Р»Р°РЅСЃ СЃРѕСЃС‚Р°РІР»СЏРµС‚ 200 РІ РІР°Р»СЋС‚Рµ USD
+2017-03-22 22:12:24 INFO  StorageLoader:23 - Loaded from D:\Husband\Git\Atm\Petrov.txt:{USD=299}
+2017-03-22 22:12:30 INFO  PrintBalanceCommand:42 - Р’Р°С€ Р±Р°Р»Р°РЅСЃ СЃРѕСЃС‚Р°РІР»СЏРµС‚ 299 РІ РІР°Р»СЋС‚Рµ USD
+2017-03-22 22:12:40 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 100 USD . РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 399 USD 
+2017-03-22 22:12:49 INFO  StorageSaver:21 - {USD=399} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Petrov.txt
+2017-03-22 22:23:41 INFO  StorageLoader:23 - Loaded from D:\Husband\AccountRepository\Petrov.txt:{USD=200}
+2017-03-22 22:23:48 INFO  PrintBalanceCommand:42 - Р’Р°С€ Р±Р°Р»Р°РЅСЃ СЃРѕСЃС‚Р°РІР»СЏРµС‚ 200 РІ РІР°Р»СЋС‚Рµ USD
+2017-03-22 22:23:54 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 100 USD . РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 300 USD 
+2017-03-22 22:23:59 INFO  StorageSaver:21 - {USD=300} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\AccountRepository\Petrov.txt
+2017-03-22 22:34:41 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-03-22 22:34:41 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-03-22 22:34:41 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-03-22 22:34:41 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-03-22 22:34:41 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-03-22 22:34:41 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-03-22 22:34:41 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-03-22 22:34:41 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-03-22 22:34:41 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-03-22 22:34:41 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-03-22 22:34:41 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-03-22 22:34:41 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-03-22 22:35:27 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-03-22 22:35:27 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-03-22 22:35:27 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-03-22 22:35:27 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-03-22 22:35:27 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-03-22 22:35:27 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-03-22 22:35:27 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-03-22 22:35:27 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-03-22 22:35:27 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-03-22 22:35:27 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-03-22 22:35:27 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-03-22 22:35:27 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-03-23 18:32:37 INFO  StorageLoader:25 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={RUB=84844}}
+2017-03-23 18:32:57 INFO  StorageLoader:25 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={RUB=84844}}
+2017-03-23 18:35:02 INFO  StorageLoader:25 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={RUB=84844}}
+2017-03-23 20:29:44 INFO  StorageLoader:36 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={RUB=84844}}
+2017-03-23 20:31:18 INFO  StorageLoader:36 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={RUB=84844}}
+2017-03-23 20:34:31 INFO  StorageLoader:36 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={RUB=84844, USD=100}}
+2017-03-23 21:18:10 INFO  StorageLoader:36 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={RUB=84844, USD=100}, Petrov2={RUB=84844, USD=100}}
+2017-03-23 21:21:16 INFO  StorageLoader:36 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={RUB=84844, USD=100, RUB1=848, USD1=200}, Petrov2={RUB=84844, USD=100, RUB1=848, USD1=200}}
+2017-03-23 21:21:25 INFO  StorageLoader:36 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={RUB=84844, USD=100, RUB1=848, USD1=200}, Petrov2={RUB=84844, USD=100, RUB1=848, USD1=200}}
+2017-03-23 21:21:48 INFO  StorageLoader:36 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={RUB=84844, USD=100, RUB1=848, USD1=200}, Petrov2={RUB=84844, USD=100, RUB1=848, USD1=200}}
+2017-03-23 21:39:36 INFO  StorageLoader:36 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={RUB=84844, USD=100, RUB1=848, USD1=200}, Petrov2={RUB=84844, USD=100, RUB1=848, USD1=200}}
+2017-03-23 21:42:34 INFO  StorageLoader:36 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-03-23 22:09:06 INFO  StorageLoader:27 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-03-23 22:10:24 INFO  StorageLoader:27 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-03-23 22:24:54 INFO  StorageLoader:27 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-03-23 22:35:00 INFO  StorageLoader:27 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-03-24 16:40:55 INFO  StorageLoader:26 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-03-24 16:40:55 INFO  StorageSaver:26 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 16:57:24 INFO  StorageLoader:26 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-03-24 16:57:24 INFO  StorageSaver:26 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 17:16:55 INFO  StorageSaver:28 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 17:20:12 INFO  StorageSaver:28 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 17:22:38 INFO  StorageSaver:29 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 17:24:11 INFO  StorageSaver:28 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 17:25:35 INFO  StorageSaver:29 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 17:27:42 INFO  StorageSaver:29 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 17:46:58 INFO  StorageLoader:26 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-03-24 17:47:32 INFO  StorageLoader:26 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-03-24 17:48:07 INFO  StorageLoader:26 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-03-24 17:50:05 INFO  StorageSaver:29 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 18:23:26 INFO  StorageSaver:29 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 18:24:45 INFO  StorageSaver:29 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 18:25:29 INFO  StorageSaver:29 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 18:27:17 INFO  StorageSaver:29 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 18:29:37 INFO  StorageSaver:29 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 18:32:53 INFO  StorageSaver:29 - {} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 18:41:51 INFO  StorageSaver:29 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 18:45:08 INFO  StorageSaver:29 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 19:13:01 INFO  StorageSaver:30 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 20:28:49 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 100  РІ РІР°Р»СЋС‚Рµ RUB 
+2017-03-24 20:31:26 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 130  РІ РІР°Р»СЋС‚Рµ RUB 
+2017-03-24 20:31:26 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 130 RUB . РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 260 RUB 
+2017-03-24 20:31:53 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 130  РІ РІР°Р»СЋС‚Рµ USD 
+2017-03-24 20:31:53 INFO  WithdrawCommand:33 - РЎ РІР°С€РµРіРѕ СЃС‡РµС‚Р° СЃРЅСЏС‚Рѕ 30 USD .РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 100 USD 
+2017-03-24 20:32:18 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 0  РІ РІР°Р»СЋС‚Рµ USD 
+2017-03-24 20:32:18 INFO  WithdrawCommand:38 - РќРµС‚ СЃСЂРµРґСЃС‚РІ РЅР° СЃС‡РµС‚Сѓ!
+2017-03-24 20:32:18 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 0 USD . РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 0 USD 
+2017-03-24 20:32:40 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 200  РІ РІР°Р»СЋС‚Рµ USD 
+2017-03-24 20:32:40 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 600  РІ РІР°Р»СЋС‚Рµ RUB 
+2017-03-24 20:32:40 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 200 USD . РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 400 USD 
+2017-03-24 20:33:01 INFO  WithdrawCommand:38 - РќРµС‚ СЃСЂРµРґСЃС‚РІ РЅР° СЃС‡РµС‚Сѓ!
+2017-03-24 20:33:15 INFO  WithdrawCommand:38 - РќРµС‚ СЃСЂРµРґСЃС‚РІ РЅР° СЃС‡РµС‚Сѓ!
+2017-03-24 20:33:15 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 130  РІ РІР°Р»СЋС‚Рµ USD 
+2017-03-24 20:33:15 INFO  WithdrawCommand:33 - РЎ РІР°С€РµРіРѕ СЃС‡РµС‚Р° СЃРЅСЏС‚Рѕ 30 USD .РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 100 USD 
+2017-03-24 20:33:15 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 100  РІ РІР°Р»СЋС‚Рµ RUB 
+2017-03-24 20:33:15 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 200  РІ РІР°Р»СЋС‚Рµ USD 
+2017-03-24 20:33:15 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 600  РІ РІР°Р»СЋС‚Рµ RUB 
+2017-03-24 20:33:15 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 200 USD . РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 400 USD 
+2017-03-24 20:33:15 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 0  РІ РІР°Р»СЋС‚Рµ USD 
+2017-03-24 20:33:15 INFO  WithdrawCommand:38 - РќРµС‚ СЃСЂРµРґСЃС‚РІ РЅР° СЃС‡РµС‚Сѓ!
+2017-03-24 20:33:15 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 0 USD . РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 0 USD 
+2017-03-24 20:33:15 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 130  РІ РІР°Р»СЋС‚Рµ RUB 
+2017-03-24 20:33:15 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 130 RUB . РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 260 RUB 
+2017-03-24 20:35:03 INFO  WithdrawCommand:38 - РќРµС‚ СЃСЂРµРґСЃС‚РІ РЅР° СЃС‡РµС‚Сѓ!
+2017-03-24 20:35:03 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 130  РІ РІР°Р»СЋС‚Рµ USD 
+2017-03-24 20:35:03 INFO  WithdrawCommand:33 - РЎ РІР°С€РµРіРѕ СЃС‡РµС‚Р° СЃРЅСЏС‚Рѕ 30 USD .РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 100 USD 
+2017-03-24 20:35:03 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 100  РІ РІР°Р»СЋС‚Рµ RUB 
+2017-03-24 20:35:03 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 200  РІ РІР°Р»СЋС‚Рµ USD 
+2017-03-24 20:35:03 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 600  РІ РІР°Р»СЋС‚Рµ RUB 
+2017-03-24 20:35:03 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 200 USD . РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 400 USD 
+2017-03-24 20:35:03 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 0  РІ РІР°Р»СЋС‚Рµ USD 
+2017-03-24 20:35:03 INFO  WithdrawCommand:38 - РќРµС‚ СЃСЂРµРґСЃС‚РІ РЅР° СЃС‡РµС‚Сѓ!
+2017-03-24 20:35:03 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 0 USD . РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 0 USD 
+2017-03-24 20:35:03 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 130  РІ РІР°Р»СЋС‚Рµ RUB 
+2017-03-24 20:35:03 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 130 RUB . РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 260 RUB 
+2017-03-24 20:49:15 INFO  StorageLoader:26 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-03-24 20:49:15 INFO  StorageSaver:30 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 20:49:15 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-03-24 20:49:15 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-03-24 20:49:15 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-03-24 20:49:15 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-03-24 20:49:15 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-03-24 20:49:15 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-03-24 20:49:15 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-03-24 20:49:15 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-03-24 20:49:15 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-03-24 20:49:15 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-03-24 20:49:15 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-03-24 20:49:15 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-03-24 20:52:43 INFO  StorageSaver:30 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\Save_account.txt
+2017-03-24 21:11:15 INFO  StorageSaver:30 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\target\Save_account.txt
+2017-03-24 21:12:02 INFO  StorageSaver:30 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\target\Save_account.txt
+2017-03-24 21:14:23 INFO  StorageSaver:30 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» D:\Husband\Git\Atm\target\Save_account.txt
+2017-03-24 21:15:16 INFO  StorageLoader:26 - Loaded from D:\Husband\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-03-24 21:15:16 INFO  StorageSaver:30 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл D:\Husband\Git\Atm\target\Save_account.txt
+2017-03-24 21:15:16 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-03-24 21:15:16 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-03-24 21:15:16 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-03-24 21:15:16 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-03-24 21:15:16 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-03-24 21:15:16 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-03-24 21:15:16 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-03-24 21:15:16 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-03-24 21:15:16 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-03-24 21:15:16 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-03-24 21:15:16 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-03-24 21:15:16 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
