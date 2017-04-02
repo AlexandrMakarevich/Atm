@@ -6,6 +6,8 @@ import org.junit.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
+import java.util.HashMap;
+import java.util.Map;
 
 public class TestService {
 
@@ -16,7 +18,7 @@ public class TestService {
     @Test
     public void testAddRub100() {
         Integer firstAmount = 100;
-        Storage storage = new Storage();
+        Storage storage = createAccountStorage();
         service = new Service(storage);
         service.processInput(String.format("+ %s %d", rubCurrency, firstAmount));
         Integer actualResult = storage.getStorage().get(rubCurrency);
@@ -26,7 +28,7 @@ public class TestService {
     @Test
     public void addSameCurrencyTwice() {
         Integer firstAmount = 130;
-        Storage storage = new Storage();
+        Storage storage = createAccountStorage();
         service = new Service(storage);
         service.processInput(String.format("+ %s %d", rubCurrency, firstAmount));
         service.processInput(String.format("+ %s %d", rubCurrency, firstAmount));
@@ -39,7 +41,7 @@ public class TestService {
     public void testWithdraw() {
         Integer firstAmount = 130;
         Integer secondAmount = 30;
-        Storage storage = new Storage();
+        Storage storage = createAccountStorage();
         service = new Service(storage);
         service.processInput(String.format("+ %s %d", usdCurrency,firstAmount));
         service.processInput(String.format("- %s %d", usdCurrency,secondAmount));
@@ -52,7 +54,7 @@ public class TestService {
     public void testWithdrawIfBalanceZero() {
         Integer firstAmount = 0;
         Integer secondAmount = 100;
-        Storage storage = new Storage();
+        Storage storage = createAccountStorage();
         service = new Service(storage);
         service.processInput(String.format("+ %s %d", usdCurrency,firstAmount));
         service.processInput(String.format("- %s %d", usdCurrency,secondAmount));
@@ -63,7 +65,7 @@ public class TestService {
     public void testCorrectAddCurrency() {
         Integer firstAmount = 200;
         Integer secondAmount = 600;
-        Storage storage = new Storage();
+        Storage storage = createAccountStorage();
         service = new Service(storage);
         service.processInput(String.format("+ %s %d", usdCurrency, firstAmount));
         service.processInput(String.format("+ %s %d", rubCurrency, secondAmount));
@@ -76,11 +78,21 @@ public class TestService {
     public void testWithdrawWhenStorageEmpty() throws IOException {
         ByteArrayOutputStream bo = new ByteArrayOutputStream();
         System.setOut(new PrintStream(bo));
-        Storage storage = new Storage();
+        Storage storage = createAccountStorage();
         service = new Service(storage);
         service.processInput("- USD 50");
         bo.flush();
         String allWrittenLines = new String(bo.toByteArray());
         Assert.assertEquals("Actual", "Нет средств на счету!\r\n", allWrittenLines);
+    }
+
+    public Storage createAccountStorage() {
+        String accountName = "Petrov";
+        Map<String, Integer> petrov = new HashMap<>();
+        Map<String, Map<String, Integer>> account = new HashMap<>();
+        account.put(accountName, petrov);
+        Storage storage = new Storage(account);
+        storage.setCurrentAccount(accountName);
+        return storage;
     }
 }
