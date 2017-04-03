@@ -148,3 +148,72 @@
 2017-03-24 21:15:16 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
 2017-03-24 21:15:16 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
 2017-03-24 21:15:16 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-04-02 16:33:13 INFO  StorageLoader:26 - Loaded from F:\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-02 16:33:13 INFO  StorageSaver:30 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл F:\Git\Atm\target\Save_account.txt
+2017-04-02 16:33:13 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-02 16:33:13 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-04-02 16:33:13 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-04-02 16:33:13 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-04-02 16:33:13 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-04-02 16:33:13 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-04-02 16:33:13 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-04-02 16:33:13 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-04-02 16:33:13 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-02 16:33:13 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-04-02 16:33:13 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-04-02 16:33:13 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-04-02 16:41:32 INFO  StorageLoader:26 - Loaded from F:\Git\Atm\Save_account.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-02 16:41:56 WARN  AtmLauncher:17 - РџСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°. 
+java.lang.IllegalArgumentException: РќРµ РІС‹РїРѕР»РЅРёРјР°СЏ РєРѕРјР°РЅРґР° Petrov
+	at com.home.atm.parser.DelegatedInputParser.defaultParseInput(DelegatedInputParser.java:25)
+	at com.home.atm.Service.processInput(Service.java:25)
+	at com.home.atm.Service.procesInput(Service.java:21)
+	at com.home.atm.PreparationAtm.process(PreparationAtm.java:14)
+	at com.home.atm.command.ServiceAccount.launchAccount(ServiceAccount.java:23)
+	at com.home.atm.AtmLauncher.main(AtmLauncher.java:10)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+2017-04-02 16:44:06 INFO  PrintBalanceCommand:42 - Р’Р°С€ Р±Р°Р»Р°РЅСЃ СЃРѕСЃС‚Р°РІР»СЏРµС‚ null РІ РІР°Р»СЋС‚Рµ USD
+2017-04-02 16:44:22 INFO  StorageSaver:30 - {null={}, Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» F:\Git\Atm\Save_account.txt
+2017-04-03 15:16:42 INFO  StorageLoader:27 - Loaded from F:\Git\Atm\Save_account.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-03 15:16:50 INFO  PrintBalanceCommand:42 - Р’Р°С€ Р±Р°Р»Р°РЅСЃ СЃРѕСЃС‚Р°РІР»СЏРµС‚ 300 РІ РІР°Р»СЋС‚Рµ EUR
+2017-04-03 15:16:50 INFO  PrintBalanceCommand:42 - Р’Р°С€ Р±Р°Р»Р°РЅСЃ СЃРѕСЃС‚Р°РІР»СЏРµС‚ 84844 РІ РІР°Р»СЋС‚Рµ RUB
+2017-04-03 15:16:50 INFO  PrintBalanceCommand:42 - Р’Р°С€ Р±Р°Р»Р°РЅСЃ СЃРѕСЃС‚Р°РІР»СЏРµС‚ 100 РІ РІР°Р»СЋС‚Рµ USD
+2017-04-03 15:33:08 INFO  StorageLoader:27 - Loaded from F:\Git\Atm\Save_account.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-03 15:33:20 INFO  PrintBalanceCommand:42 - Р’Р°С€ Р±Р°Р»Р°РЅСЃ СЃРѕСЃС‚Р°РІР»СЏРµС‚ 300 РІ РІР°Р»СЋС‚Рµ EUR
+2017-04-03 15:33:20 INFO  PrintBalanceCommand:42 - Р’Р°С€ Р±Р°Р»Р°РЅСЃ СЃРѕСЃС‚Р°РІР»СЏРµС‚ 84844 РІ РІР°Р»СЋС‚Рµ RUB
+2017-04-03 15:33:20 INFO  PrintBalanceCommand:42 - Р’Р°С€ Р±Р°Р»Р°РЅСЃ СЃРѕСЃС‚Р°РІР»СЏРµС‚ 100 РІ РІР°Р»СЋС‚Рµ USD
+2017-04-03 15:33:36 INFO  WithdrawCommand:33 - РЎ РІР°С€РµРіРѕ СЃС‡РµС‚Р° СЃРЅСЏС‚Рѕ 100 USD .РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 0 USD 
+2017-04-03 15:33:39 WARN  AtmLauncher:17 - РџСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°. 
+java.lang.IllegalArgumentException: РќРµ РІС‹РїРѕР»РЅРёРјР°СЏ РєРѕРјР°РЅРґР° fdef
+	at com.home.atm.parser.DelegatedInputParser.defaultParseInput(DelegatedInputParser.java:25)
+	at com.home.atm.Service.processInput(Service.java:25)
+	at com.home.atm.Service.procesInput(Service.java:21)
+	at com.home.atm.PreparationAtm.process(PreparationAtm.java:14)
+	at com.home.atm.command.ServiceAccount.launchAccount(ServiceAccount.java:17)
+	at com.home.atm.AtmLauncher.main(AtmLauncher.java:15)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at com.intellij.rt.execution.application.AppMain.main(AppMain.java:147)
+2017-04-03 15:33:48 INFO  StorageSaver:30 - {Petrov={EUR=300, RUB=84844, USD=0}, Petrov2={RUB1=848, USD1=200}} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» F:\Git\Atm\Save_account.txt
+2017-04-03 15:38:14 INFO  StorageLoader:27 - Loaded from F:\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-03 15:38:14 INFO  StorageSaver:30 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл F:\Git\Atm\target\Save_account.txt
+2017-04-03 15:38:14 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-03 15:38:14 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-04-03 15:38:14 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-04-03 15:38:14 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-04-03 15:38:14 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-04-03 15:38:14 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-04-03 15:38:14 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-04-03 15:38:14 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-04-03 15:38:14 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-03 15:38:14 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-04-03 15:38:14 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-04-03 15:38:14 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-04-03 15:39:13 INFO  StorageLoader:27 - Loaded from F:\Git\Atm\Save_account.txt:{Petrov={EUR=300, RUB=84844, USD=0}, Petrov2={RUB1=848, USD1=200}}
+2017-04-03 15:39:34 INFO  StorageSaver:30 - {bkh={}, Petrov={EUR=300, RUB=84844, USD=0}, Petrov2={RUB1=848, USD1=200}} Р”Р°РЅРЅС‹Рµ СЃРѕС…СЂР°РЅРµРЅС‹ РІ С„Р°Р№Р» F:\Git\Atm\Save_account.txt
