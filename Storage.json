@@ -1,0 +1,18 @@
+{
+  "storage": {
+    "EUR": 300,
+    "RUB": 84844,
+    "USD": 660
+  },
+  "accountStorage": {
+    "Petrov": {
+      "EUR": 300,
+      "RUB": 84844,
+      "USD": 660
+    },
+    "Petrov2": {
+      "RUB": 848,
+      "USD": 200
+    }
+  }
+}

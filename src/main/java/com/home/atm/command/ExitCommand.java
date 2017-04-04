@@ -2,13 +2,16 @@ package com.home.atm.command;
 
 import com.home.atm.storage.Storage;
 import com.home.atm.storage.StorageSaver;
+import com.home.atm.storage.StorageSaverJSON;
 import org.apache.log4j.Logger;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 
 public class ExitCommand implements Command {
 
     private StorageSaver storageSever ;
     private static final Logger LOGGER = Logger.getLogger(ExitCommand.class);
+    private StorageSaverJSON storageSaverJSON = new StorageSaverJSON();
 
     public ExitCommand() {
        storageSever = new StorageSaver();
@@ -17,9 +20,9 @@ public class ExitCommand implements Command {
     @Override
     public void execute(Storage storage) {
        try{
-           storageSever.writeData(storage);
+           storageSaverJSON.writer(storage, "src/main/resources/Storage.json");
        }
-       catch(FileNotFoundException ex) {
+       catch(IOException ex) {
            System.out.println("Ошибка сохранения файла " + ex.getMessage());
            LOGGER.warn("Ошибка сохранения файла ", ex);
        }
