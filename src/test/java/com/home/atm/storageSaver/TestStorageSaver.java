@@ -1,31 +1,32 @@
 package com.home.atm.storageSaver;
 
 import com.home.atm.storage.Storage;
-import com.home.atm.storage.StorageSaver;
+import com.home.atm.storage.StorageSaverCSV;
 import com.home.atm.storageLoader.TestStorageLoader;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.*;
 
 public class TestStorageSaver {
 
-    private StorageSaver storageSaver;
+    private StorageSaverCSV storageSaver;
     private TestStorageLoader testStorageLoader;
     private String expectedFile = "src/test/resources/Storage.txt";
     public static String file = "target/Save_account.txt";
 
     @Before
     public void init() {
-        storageSaver = new StorageSaver();
+        storageSaver = new StorageSaverCSV("AA");
         testStorageLoader = new TestStorageLoader();
-        StorageSaver.filename = file;
+        StorageSaverCSV.fileName = file;
     }
 
     @Test
-    public void testStorageSaver() throws FileNotFoundException {
+    public void testStorageSaver() throws IOException{
         Storage storage = testStorageLoader.createStorage();
         storageSaver.writeData(storage);
         List<String> actualList = loadFile(file);

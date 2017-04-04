@@ -1,7 +1,7 @@
 package com.home.atm.storageLoader;
 
 import com.home.atm.storage.Storage;
-import com.home.atm.storage.StorageLoader;
+import com.home.atm.storage.StorageLoaderCSV;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,16 +11,16 @@ import java.util.TreeMap;
 
 public class TestStorageLoader {
 
-    private StorageLoader storageLoader;
+    private StorageLoaderCSV storageLoader;
 
     @Before
     public void init() {
-        storageLoader = new StorageLoader();
+        storageLoader = new StorageLoaderCSV("src/test/resources/Storage.txt");
     }
 
     @Test
     public void testLoadStorage() throws FileNotFoundException {
-        Storage actualResult = storageLoader.loadStorage("src/test/resources/Storage.txt");
+        Storage actualResult = storageLoader.loadStorage();
         Assert.assertEquals("ActualResult must be expected", createStorage().getAccountStorage(), actualResult.getAccountStorage());
     }
 
@@ -37,5 +37,4 @@ public class TestStorageLoader {
         account.put("Petrov2", petrov2);
         return new Storage(account);
     }
-
 }

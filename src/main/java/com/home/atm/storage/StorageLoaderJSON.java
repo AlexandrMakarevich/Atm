@@ -5,11 +5,17 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Map;
 
-public class StorageLoaderJSON {
+public class StorageLoaderJSON implements StorageLoader {
 
     private ObjectMapper mapper = new ObjectMapper();
+    private String fileName;
 
-    public Storage loadStorage(String fileName) throws IOException {
+    public StorageLoaderJSON(String fileName) {
+        this.fileName = fileName;
+    }
+
+    @Override
+    public Storage loadStorage() throws IOException {
         File file = new File(fileName);
         Map<String, Map<String, Integer>> accountStorage = mapper.readValue(file, Map.class );
         return new Storage(accountStorage);

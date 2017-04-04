@@ -2,16 +2,14 @@ package com.home.atm;
 
 import com.home.atm.command.ServiceAccount;
 import com.home.atm.storage.Storage;
-import com.home.atm.storage.StorageLoaderJSON;
+import com.home.atm.storage.StorageLoaderFactory;
 import java.io.IOException;
 
 public class AtmLauncher {
 
     public static void main(String[] args) throws IOException{
-//        StorageLoader storageLoader = new StorageLoader();
-//        Storage storage = storageLoader.loadStorage("Save_account.txt");
-        StorageLoaderJSON storageLoaderJSON = new StorageLoaderJSON();
-        Storage storage = storageLoaderJSON.loadStorage("src/main/resources/Storage.json");
+        StorageLoaderFactory storageLoaderFactory = new StorageLoaderFactory();
+        Storage storage = storageLoaderFactory.loadStorage();
         ServiceAccount serviceAccount = new ServiceAccount();
         serviceAccount.launchAccount(storage);
     }

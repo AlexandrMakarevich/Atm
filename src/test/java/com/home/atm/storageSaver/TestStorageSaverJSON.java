@@ -14,19 +14,20 @@ public class TestStorageSaverJSON {
     private StorageSaverJSON storageSaverJSON;
     private TestStorageLoaderJSON testStorageLoaderJSON;
     private StorageLoaderJSON storageLoaderJSON;
+    private String fileName = "target/Storage_test.json";
 
     @Before
     public void init() {
-        storageSaverJSON = new StorageSaverJSON();
+        storageSaverJSON = new StorageSaverJSON(fileName);
         testStorageLoaderJSON = new TestStorageLoaderJSON();
-        storageLoaderJSON = new StorageLoaderJSON();
+        storageLoaderJSON = new StorageLoaderJSON(fileName);
     }
 
     @Test
     public void testStorageSaverJSON() throws IOException {
         Storage actualStorage = testStorageLoaderJSON.createStorage();
-        storageSaverJSON.writer(actualStorage, "target/Storage_test.json");
-        Storage expectedStorage = storageLoaderJSON.loadStorage("target/Storage_test.json");
+        storageSaverJSON.writeData(actualStorage);
+        Storage expectedStorage = storageLoaderJSON.loadStorage();
         Assert.assertEquals("Actual result must be expected", expectedStorage.getAccountStorage(), actualStorage.getAccountStorage());
     }
 }

@@ -19,12 +19,12 @@ public class TestStorageLoaderJSON {
 
     @Before
     public void init() {
-        storageLoaderJSON = new StorageLoaderJSON();
+        storageLoaderJSON = new StorageLoaderJSON(fileActualStorage);
     }
 
     @Test
     public void testStorageLoaderJSON()throws IOException {
-        Storage actualStorage = storageLoaderJSON.loadStorage(fileActualStorage);
+        Storage actualStorage = storageLoaderJSON.loadStorage();
         Storage expectedStorage = createStorage();
         Assert.assertEquals("Actual result must be expected",  expectedStorage.getAccountStorage(), actualStorage.getAccountStorage());
         System.out.println(actualStorage.getAccountStorage());
