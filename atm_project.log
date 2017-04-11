@@ -340,3 +340,143 @@ java.lang.IllegalArgumentException: РќРµ РІС‹РїРѕР»РЅРёРјР°СЏ РєРѕРјР°РЅРґР° fde
 2017-04-06 22:29:16 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 0 USD . РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 0 USD 
 2017-04-06 22:29:16 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 130  РІ РІР°Р»СЋС‚Рµ RUB 
 2017-04-06 22:29:16 INFO  AddCommand:36 - Р”РѕР±Р°РІРёР»Рё 130 RUB . РќР° РІР°С€РµРј СЃС‡РµС‚Сѓ 260 RUB 
+2017-04-11 15:59:46 INFO  StorageLoaderCSV:32 - Loaded from F:\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-11 15:59:46 INFO  StorageSaverCSV:35 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл F:\Git\Atm\target\Save_account.txt
+2017-04-11 15:59:46 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 15:59:46 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-04-11 15:59:46 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-04-11 15:59:46 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-04-11 15:59:46 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-04-11 15:59:46 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-04-11 15:59:46 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-04-11 15:59:46 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-04-11 15:59:46 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 15:59:46 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-04-11 15:59:46 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-04-11 15:59:46 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-04-11 16:03:29 INFO  StorageLoaderCSV:32 - Loaded from F:\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-11 16:03:29 INFO  StorageSaverCSV:35 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл F:\Git\Atm\target\Save_account.txt
+2017-04-11 16:03:29 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 16:03:29 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-04-11 16:03:29 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-04-11 16:03:29 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-04-11 16:03:29 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-04-11 16:03:29 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-04-11 16:03:29 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-04-11 16:03:29 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-04-11 16:03:29 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 16:03:29 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-04-11 16:03:29 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-04-11 16:03:29 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-04-11 16:04:58 INFO  StorageLoaderCSV:32 - Loaded from F:\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-11 16:04:58 INFO  StorageSaverCSV:35 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл F:\Git\Atm\target\Save_account.txt
+2017-04-11 16:04:58 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 16:04:58 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-04-11 16:04:58 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-04-11 16:04:58 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-04-11 16:04:58 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-04-11 16:04:58 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-04-11 16:04:58 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-04-11 16:04:58 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-04-11 16:04:58 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 16:04:58 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-04-11 16:04:58 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-04-11 16:04:58 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-04-11 19:24:12 INFO  StorageLoaderCSV:32 - Loaded from F:\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-11 19:24:12 INFO  StorageSaverCSV:35 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл F:\Git\Atm\target\Save_account.txt
+2017-04-11 19:24:12 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:24:12 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-04-11 19:24:12 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-04-11 19:24:12 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-04-11 19:24:12 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-04-11 19:24:12 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-04-11 19:24:12 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-04-11 19:24:12 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-04-11 19:24:12 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:24:12 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-04-11 19:24:12 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-04-11 19:24:12 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-04-11 19:29:59 INFO  StorageLoaderCSV:32 - Loaded from F:\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-11 19:29:59 INFO  StorageSaverCSV:35 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл F:\Git\Atm\target\Save_account.txt
+2017-04-11 19:29:59 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:29:59 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-04-11 19:29:59 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-04-11 19:29:59 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-04-11 19:29:59 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-04-11 19:29:59 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-04-11 19:29:59 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-04-11 19:29:59 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-04-11 19:29:59 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:29:59 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-04-11 19:29:59 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-04-11 19:29:59 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-04-11 19:35:24 INFO  StorageLoaderCSV:32 - Loaded from F:\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-11 19:35:25 INFO  StorageSaverCSV:35 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл F:\Git\Atm\target\Save_account.txt
+2017-04-11 19:35:25 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:35:25 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-04-11 19:35:25 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-04-11 19:35:25 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-04-11 19:35:25 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-04-11 19:35:25 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-04-11 19:35:25 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-04-11 19:35:25 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-04-11 19:35:25 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:35:25 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-04-11 19:35:25 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-04-11 19:35:25 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-04-11 19:40:25 INFO  StorageLoaderCSV:32 - Loaded from F:\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-11 19:40:25 INFO  StorageSaverCSV:35 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл F:\Git\Atm\target\Save_account.txt
+2017-04-11 19:40:25 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:40:25 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-04-11 19:40:25 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-04-11 19:40:25 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-04-11 19:40:25 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-04-11 19:40:25 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-04-11 19:40:25 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-04-11 19:40:25 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-04-11 19:40:25 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:40:25 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-04-11 19:40:25 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-04-11 19:40:25 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-04-11 19:41:40 INFO  StorageLoaderCSV:32 - Loaded from F:\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-11 19:41:40 INFO  StorageSaverCSV:35 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл F:\Git\Atm\target\Save_account.txt
+2017-04-11 19:41:40 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:41:40 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-04-11 19:41:40 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-04-11 19:41:40 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-04-11 19:41:40 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-04-11 19:41:40 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-04-11 19:41:40 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-04-11 19:41:40 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-04-11 19:41:40 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:41:40 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-04-11 19:41:40 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-04-11 19:41:40 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-04-11 19:44:28 INFO  StorageLoaderCSV:32 - Loaded from F:\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-11 19:44:28 INFO  StorageSaverCSV:35 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл F:\Git\Atm\target\Save_account.txt
+2017-04-11 19:44:28 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:44:28 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-04-11 19:44:28 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-04-11 19:44:28 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-04-11 19:44:28 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-04-11 19:44:28 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-04-11 19:44:28 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-04-11 19:44:28 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-04-11 19:44:28 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:44:28 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-04-11 19:44:28 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-04-11 19:44:28 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
+2017-04-11 19:46:54 INFO  StorageLoaderCSV:32 - Loaded from F:\Git\Atm\src\test\resources\Storage.txt:{Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}}
+2017-04-11 19:46:54 INFO  StorageSaverCSV:35 - {Petrov={EUR=300, RUB=84844, USD=100}, Petrov2={RUB1=848, USD1=200}} Данные сохранены в файл F:\Git\Atm\target\Save_account.txt
+2017-04-11 19:46:54 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:46:54 INFO  AddCommand:36 - Добавили 130  в валюте USD 
+2017-04-11 19:46:54 INFO  WithdrawCommand:33 - С вашего счета снято 30 USD .На вашем счету 100 USD 
+2017-04-11 19:46:54 INFO  AddCommand:36 - Добавили 100  в валюте RUB 
+2017-04-11 19:46:54 INFO  AddCommand:36 - Добавили 200  в валюте USD 
+2017-04-11 19:46:54 INFO  AddCommand:36 - Добавили 600  в валюте RUB 
+2017-04-11 19:46:54 INFO  AddCommand:36 - Добавили 200 USD . На вашем счету 400 USD 
+2017-04-11 19:46:54 INFO  AddCommand:36 - Добавили 0  в валюте USD 
+2017-04-11 19:46:54 INFO  WithdrawCommand:38 - Нет средств на счету!
+2017-04-11 19:46:54 INFO  AddCommand:36 - Добавили 0 USD . На вашем счету 0 USD 
+2017-04-11 19:46:54 INFO  AddCommand:36 - Добавили 130  в валюте RUB 
+2017-04-11 19:46:54 INFO  AddCommand:36 - Добавили 130 RUB . На вашем счету 260 RUB 
