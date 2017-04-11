@@ -20,4 +20,6 @@ public class StorageLoaderJSON implements StorageLoader {
         Map<String, Map<String, Integer>> accountStorage = mapper.readValue(file, Map.class );
         return new Storage(accountStorage);
     }
+
+
 }

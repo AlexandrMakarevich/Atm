@@ -20,4 +20,12 @@ public class StorageLoaderFactory implements StorageLoader {
         }
         throw new IllegalArgumentException("Wrong value of STORAGE_TYPE,allowed values csv, json");
     }
+
+    public void setStorageLoaderCSV(StorageLoaderCSV storageLoaderCSV) {
+        this.storageLoaderCSV = storageLoaderCSV;
+    }
+
+    public void setStorageLoaderJSON(StorageLoaderJSON storageLoaderJSON) {
+        this.storageLoaderJSON = storageLoaderJSON;
+    }
 }

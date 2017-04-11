@@ -8,10 +8,11 @@ public class StorageSaverFactory implements StorageSaver {
     private StorageSaverCSV storageSaverCSV = new StorageSaverCSV(StorageLoaderFactory.CSV_STORAGE);
     private StorageConstant storageConstant = new StorageConstant();
 
+
     @Override
     public void writeData(Storage storage) throws IOException {
         if (storageConstant.isJSON()) {
-            storageSaverJSON.writeData(storage);
+           storageSaverJSON.writeData(storage);
             return;
         }
         if (storageConstant.isCSV()) {
@@ -19,5 +20,13 @@ public class StorageSaverFactory implements StorageSaver {
             return;
         }
         throw new IllegalArgumentException("Wrong format of STORAGE_TYPE,it must be csv or json");
+    }
+
+    public void setStorageSaverJSON(StorageSaverJSON storageSaverJSON) {
+        this.storageSaverJSON = storageSaverJSON;
+    }
+
+    public void setStorageSaverCSV(StorageSaverCSV storageSaverCSV) {
+        this.storageSaverCSV = storageSaverCSV;
     }
 }
