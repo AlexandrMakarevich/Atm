@@ -22,6 +22,6 @@ public class PrintParser implements InputParser {
             String currency = print.group(1);
             return new PrintBalanceCommand(currency);
         }
-        throw new IllegalArgumentException("Не допустимая команда : " + inputString );
+        throw new IllegalArgumentException("Wrong command : " + inputString );
     }
 }

@@ -24,6 +24,6 @@ public class AddParser implements InputParser{
             Integer amount = Integer.parseInt(add.group(2));
             return new AddCommand(currency, amount);
         }
-        throw new IllegalArgumentException("Не допустимая команда : " + inputString );
+        throw new IllegalArgumentException("Wrong command : " + inputString );
     }
 }

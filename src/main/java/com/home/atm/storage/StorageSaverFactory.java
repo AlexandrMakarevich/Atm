@@ -4,9 +4,10 @@ import java.io.IOException;
 
 public class StorageSaverFactory implements StorageSaver {
 
-    private StorageSaverJSON storageSaverJSON = new StorageSaverJSON(StorageLoaderFactory.JSON_STORAGE);
-    private StorageSaverCSV storageSaverCSV = new StorageSaverCSV(StorageLoaderFactory.CSV_STORAGE);
     private StorageConstant storageConstant = new StorageConstant();
+    private String storageNameFile = storageConstant.getFileNameProperty();
+    private StorageSaverJSON storageSaverJSON = new StorageSaverJSON(storageNameFile);
+    private StorageSaverCSV storageSaverCSV = new StorageSaverCSV(storageNameFile);
 
 
     @Override

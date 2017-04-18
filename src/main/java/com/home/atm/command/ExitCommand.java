@@ -20,10 +20,10 @@ public class ExitCommand implements Command {
            storageSaverFactory.writeData(storage);
        }
        catch(IOException ex) {
-           System.out.println("Ошибка сохранения файла " + ex.getMessage());
-           LOGGER.warn("Ошибка сохранения файла ", ex);
+           System.out.println("File saving error " + ex.getMessage());
+           LOGGER.warn("File saving error ", ex);
        }
-        System.out.println("Получил команду выйти.");
+        System.out.println("Get command close.");
         System.exit(0);
     }
 

@@ -38,8 +38,8 @@ public class PrintBalanceCommand implements Command {
     }
 
     public void print(String inputKey, Integer inputValue) {
-        System.out.printf("Ваш баланс составляет %d в валюте %s \n",inputValue,inputKey);
-        LOGGER.info("Ваш баланс составляет " + inputValue + " в валюте " + inputKey);
+        System.out.printf("Your balance is %d in currency %s \n",inputValue,inputKey);
+        LOGGER.info("Your balance is " + inputValue + " in currency " + inputKey);
     }
 
     @Override

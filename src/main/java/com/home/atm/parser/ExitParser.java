@@ -15,7 +15,7 @@ public class ExitParser implements InputParser {
         if( exit.matches()){
             return new ExitCommand();
         }
-        throw new IllegalArgumentException("Не допустимая команда : " + inputString );
+        throw new IllegalArgumentException("Wrong command : " + inputString );
     }
 
     @Override

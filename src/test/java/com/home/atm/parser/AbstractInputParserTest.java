@@ -13,7 +13,7 @@ public abstract class AbstractInputParserTest {
     public void testWrongCommand() {
         String input = "+ usd 100";
         this.testRuleException.expect(IllegalArgumentException.class);
-        this.testRuleException.expectMessage("Не допустимая команда : " + input);
+        this.testRuleException.expectMessage("Wrong command : " + input);
         getParser().parseInput(input);
     }
 

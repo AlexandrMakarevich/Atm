@@ -24,6 +24,6 @@ public class WithdrawParser implements InputParser{
             Integer amount = Integer.parseInt(withdraw.group(2));
             return new WithdrawCommand(currency, amount);
         }
-        throw new IllegalArgumentException("Не допустимая команда : " + inputString );
+        throw new IllegalArgumentException("Wrong command : " + inputString );
     }
 }

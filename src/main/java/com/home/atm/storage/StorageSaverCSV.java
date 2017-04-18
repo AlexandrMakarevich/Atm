@@ -32,6 +32,6 @@ public class StorageSaverCSV implements StorageSaver {
             pwt.format(stringBuilder.toString());
         }
         pwt.flush();
-        LOGGER.info(storage.getAccountStorage() + " Данные сохранены в файл " + file.getAbsolutePath());
+        LOGGER.info(storage.getAccountStorage() + " Data save in file " + file.getAbsolutePath());
     }
 }

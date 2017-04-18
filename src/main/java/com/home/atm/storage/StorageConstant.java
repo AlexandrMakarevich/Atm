@@ -5,6 +5,7 @@ public class StorageConstant {
     private final String JSON_FORMAT = "json";
     private final String CSV_FORMAT = "csv";
     public static final String STORAGE_TYPE = "storageType";
+    public static final String STORAGE_FILE = "storageFile";
 
     public boolean isJSON() {
         return JSON_FORMAT.equals(getStorageTypeProperty());
@@ -18,4 +19,7 @@ public class StorageConstant {
         return System.getProperty(STORAGE_TYPE);
     }
 
+    public String getFileNameProperty() {
+        return System.getProperty(STORAGE_FILE);
+    }
 }

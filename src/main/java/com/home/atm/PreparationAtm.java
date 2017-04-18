@@ -13,8 +13,8 @@ public class PreparationAtm {
             try {
                 service.procesInput();
             } catch (IllegalArgumentException ex) {
-                System.out.println("Произошла ошибка. " + ex.getMessage());
-                LOGGER.warn("Произошла ошибка. ", ex);
+                System.out.println("An error has occurred. " + ex.getMessage());
+                LOGGER.warn("An error has occurred. ", ex);
             }
         }
     }

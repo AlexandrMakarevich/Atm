@@ -22,6 +22,6 @@ public class DelegatedInputParser {
              return inputParser.parseInput(inputString);
           }
        }
-       throw new IllegalArgumentException("Не выполнимая команда " + inputString);
+       throw new IllegalArgumentException("Wrong command " + inputString);
     }
 }

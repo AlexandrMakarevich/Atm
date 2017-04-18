@@ -83,7 +83,7 @@ public class TestService {
         service.processInput("- USD 50");
         bo.flush();
         String allWrittenLines = new String(bo.toByteArray());
-        Assert.assertEquals("Actual", "Нет средств на счету!\r\n", allWrittenLines);
+        Assert.assertEquals("Actual", "You don't have money on balance!\n", allWrittenLines);
     }
 
     public Storage createAccountStorage() {

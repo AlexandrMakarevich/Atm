@@ -28,14 +28,14 @@ public class WithdrawCommand implements Command {
            return;
         }
         storage.getStorage().put (currency, balance);
-        String formattedString = String.format("С вашего счета снято %d %s .На вашем счету %d %s ",amount, currency, balance, currency );
+        String formattedString = String.format("Removed from your account %d %s .On you balance %d %s ",amount, currency, balance, currency );
         System.out.println(formattedString);
         LOGGER.info(formattedString);
     }
 
     public void printZero() {
-        System.out.println("Нет средств на счету!");
-        LOGGER.info("Нет средств на счету!");
+        System.out.println("You don't have money on balance!");
+        LOGGER.info("You don't have money on balance!");
     }
 
     @Override

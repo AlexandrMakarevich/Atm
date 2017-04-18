@@ -20,13 +20,13 @@ public class AddCommand implements Command {
 		Integer currentValue = storage.getStorage().get(currency);
 		if (currentValue == null) {
 			storage.getStorage().put(currency, amount);
-			String formattedString = String.format("Добавили %d  в валюте %s ", amount, currency);
+			String formattedString = String.format("Added %d in currency %s", amount, currency);
 			print(formattedString);
 		}
 		else {
 			storage.getStorage().put(currency, amount + currentValue);
 			Integer currentValue2 = storage.getStorage().get(currency);
-			String formattedString = String.format("Добавили %d %s . На вашем счету %d %s ",amount, currency, currentValue2 , currency);
+			String formattedString = String.format("Added %d %s . On your balance %d %s ",amount, currency, currentValue2 , currency);
 			print(formattedString);
 		}
 	}

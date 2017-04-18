@@ -15,7 +15,7 @@ public class Service {
     }
 
     public void procesInput() {
-        System.out.println("¬ведите операцию :");
+        System.out.println("Enter operation :");
         Scanner in = new Scanner(System.in);
         String inputString = in.nextLine();
         this.processInput(inputString);

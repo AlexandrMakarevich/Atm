@@ -4,11 +4,10 @@ import java.io.IOException;
 
 public class StorageLoaderFactory implements StorageLoader {
 
-    public static final String JSON_STORAGE = "Storage.json";
-    public static final String CSV_STORAGE = "Storage.csv";
-    private StorageLoaderCSV storageLoaderCSV = new StorageLoaderCSV(CSV_STORAGE);
-    private StorageLoaderJSON storageLoaderJSON = new StorageLoaderJSON(JSON_STORAGE);
     private StorageConstant storageConstant = new StorageConstant();
+    private String storageNameFile = storageConstant.getFileNameProperty();
+    private StorageLoaderCSV storageLoaderCSV = new StorageLoaderCSV(storageNameFile);
+    private StorageLoaderJSON storageLoaderJSON = new StorageLoaderJSON(storageNameFile);
 
     @Override
     public Storage loadStorage() throws IOException {
