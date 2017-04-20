@@ -10,7 +10,7 @@ public class TestLoaderProperty {
 
     private LoaderProperty loaderProperty;
     private String expectedStorageType = "json";
-    private String expectedStorageFile = "storage.json";
+    private String expectedStorageFile = "Storage.json";
 
     @Before
     public void init()  {
