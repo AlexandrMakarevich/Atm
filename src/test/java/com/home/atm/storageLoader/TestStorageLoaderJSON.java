@@ -41,6 +41,10 @@ public class TestStorageLoaderJSON {
         Map<String, Map<String, Integer>> account = new HashMap<>();
         account.put("Petrov", petrov);
         account.put("Petrov2", petrov2);
-        return new Storage(account);
+        Map<String, Integer> petrov3 = new HashMap<>();
+        petrov3.put("USD", 100);
+        Map<String, Map<String, Integer>> credit = new HashMap<>();
+        credit.put("Petrov", petrov3);
+        return new Storage(account, credit);
     }
 }

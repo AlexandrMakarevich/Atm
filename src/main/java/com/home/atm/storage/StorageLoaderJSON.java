@@ -1,9 +1,8 @@
 package com.home.atm.storage;
 
-import org.codehaus.jackson.map.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.File;
 import java.io.IOException;
-import java.util.Map;
 
 public class StorageLoaderJSON implements StorageLoader {
 
@@ -17,9 +16,7 @@ public class StorageLoaderJSON implements StorageLoader {
     @Override
     public Storage loadStorage() throws IOException {
         File file = new File(fileName);
-        Map<String, Map<String, Integer>> accountStorage = mapper.readValue(file, Map.class );
-        return new Storage(accountStorage);
+        Storage storage = mapper.readValue(file, Storage.class);
+        return storage;
     }
-
-
 }

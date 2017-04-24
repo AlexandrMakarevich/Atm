@@ -1,32 +1,32 @@
 package com.home.atm.parser;
 
 import com.home.atm.command.Command;
-import com.home.atm.command.CreditCommand;
+import com.home.atm.command.PrintCreditBalance;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class TestCreditParser extends AbstractInputParserTest{
+public class TestPrintCreditBalance extends AbstractInputParserTest{
 
-    private CreditParser creditParser;
+    private PrintCreditParser printCreditParser;
 
     @Before
     public void init() {
-        creditParser = new CreditParser();
+        printCreditParser = new PrintCreditParser();
     }
 
     public void executeAndAssert(String inputString, Command expectedResult) {
-        Command actualResult = creditParser.parseInput(inputString);
+        Command actualResult = printCreditParser.parseInput(inputString);
         Assert.assertEquals("Actual result must be expected", expectedResult, actualResult);
     }
 
     @Test
-    public void testTakeCredit333() {
-        executeAndAssert("credit RUB 333", new CreditCommand("RUB",333));
+    public void testPrintCreditBalance() {
+        executeAndAssert("credit balance", new PrintCreditBalance());
     }
 
     @Override
     public InputParser getParser() {
-        return creditParser;
+        return printCreditParser;
     }
 }

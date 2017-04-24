@@ -7,7 +7,7 @@ import java.util.regex.Pattern;
 
 public class CreditParser implements InputParser{
 
-    private Pattern creditPattern = Pattern.compile("^credit ([A-Z]{3}) ([0-9]{1,3})$");
+    private Pattern creditPattern = Pattern.compile("^credit ([A-Z]{3}) ([0-9]{1,4})$");
 
     @Override
     public boolean commandMatch(String inputString) {

@@ -2,7 +2,7 @@ package com.home.atm.storageSaver;
 
 import com.home.atm.storage.Storage;
 import com.home.atm.storage.StorageSaverCSV;
-import com.home.atm.storageLoader.TestStorageLoader;
+import com.home.atm.storageLoader.TestStorageLoaderCSV;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -14,20 +14,20 @@ import java.util.*;
 public class TestStorageSaver {
 
     private StorageSaverCSV storageSaver;
-    private TestStorageLoader testStorageLoader;
+    private TestStorageLoaderCSV testStorageLoaderCSV;
     private String expectedFile = "src/test/resources/Storage.txt";
     public static String file = "target/Save_account.txt";
 
     @Before
     public void init() {
         storageSaver = new StorageSaverCSV("AA");
-        testStorageLoader = new TestStorageLoader();
+        testStorageLoaderCSV = new TestStorageLoaderCSV();
         StorageSaverCSV.fileName = file;
     }
 
     @Test
     public void testStorageSaver() throws IOException{
-        Storage storage = testStorageLoader.createStorage();
+        Storage storage = testStorageLoaderCSV.createStorage();
         storageSaver.writeData(storage);
         List<String> actualList = loadFile(file);
         List<String> expectedList = loadFile(expectedFile);

@@ -1,13 +1,27 @@
 package com.home.atm.storage;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.HashMap;
 import java.util.Map;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Storage {
 
+	@JsonProperty
 	private Map<String, Map<String, Integer>> accountStorage;
 
+	@JsonProperty
+	private Map<String, Map<String, Integer>> creditStorage;
+
+	@JsonIgnore
 	private String currentAccount;
+
+	public Storage(Map<String, Map<String, Integer>> accountStorage, Map<String, Map<String, Integer>> creditStorage) {
+		this.accountStorage = accountStorage;
+		this.creditStorage = creditStorage;
+	}
 
 	public Storage(Map<String, Map<String, Integer>> accountStorage) {
 		this.accountStorage = accountStorage;
@@ -15,6 +29,14 @@ public class Storage {
 
 	public Storage() {
 
+	}
+	public Map<String, Integer> getCreditStorage() {
+		Map<String, Integer> storage = creditStorage.get(currentAccount);
+		if (storage == null) {
+			storage = new HashMap<>();
+			creditStorage.put(currentAccount, storage);
+		}
+		return storage;
 	}
 
 	public Map<String, Integer> getStorage() {
@@ -33,4 +55,9 @@ public class Storage {
 	public Map<String, Map<String, Integer>> getAccountStorage() {
 		return accountStorage;
 	}
+
+	public Map<String, Map<String, Integer>> getCredit() {
+		return creditStorage;
+	}
+
 }

@@ -21,15 +21,21 @@ public class StorageLoaderCSV implements StorageLoader {
         File file = new File(fileName);
         Scanner scanner = new Scanner(file);
         Map<String, Map<String, Integer>> map = new HashMap<>();
+        Map<String, Map<String, Integer>> creditMap = new HashMap<>();
         while (scanner.hasNextLine()) {
             Map<String, Integer> map1 = new HashMap<>();
             String[] result = scanner.nextLine().split(" ");
-            for (int i = 1; i < result.length; i = i + 2) {
+            for (int i = 2; i < result.length; i = i + 2) {
                 map1.put(result[i], Integer.valueOf(result[i + 1]));
             }
-            map.put(result[0], map1);
+            if (result[0].equals("balance") ) {
+                map.put(result[1], map1);
+            }
+            if (result[0].equals("credit")) {
+                creditMap.put(result[1],map1);
+            }
         }
         LOGGER.info("Loaded from " + file.getAbsolutePath() + ":" + map);
-        return new Storage(map);
+        return new Storage(map, creditMap);
     }
 }

@@ -15,6 +15,7 @@ public class DelegatedInputParser {
         inputParsers.add(new AddParser());
         inputParsers.add(new WithdrawParser());
         inputParsers.add(new CreditParser());
+        inputParsers.add(new PrintCreditParser());
     }
 
     public Command defaultParseInput(String inputString) {

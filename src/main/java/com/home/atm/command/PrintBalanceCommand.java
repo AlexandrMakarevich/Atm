@@ -29,7 +29,7 @@ public class PrintBalanceCommand implements Command {
 
     public void printAllCurrencies(Storage storage) {
         if (storage.getStorage().isEmpty()) {
-            System.out.println("Account is empty");
+            System.out.println("Account is empty.");
             return;
         }
         for (Map.Entry<String, Integer> entry : storage.getStorage().entrySet()) {
@@ -38,7 +38,7 @@ public class PrintBalanceCommand implements Command {
     }
 
     public void print(String inputKey, Integer inputValue) {
-        System.out.printf("Your balance is %d in currency %s \n",inputValue,inputKey);
+        System.out.printf("Your balance is %d in currency %s.\n",inputValue,inputKey);
         LOGGER.info("Your balance is " + inputValue + " in currency " + inputKey);
     }
 

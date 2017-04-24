@@ -5,7 +5,7 @@ import org.apache.log4j.Logger;
 
 public class PreparationAtm {
 
-    private static final Logger LOGGER = Logger.getLogger(AtmLauncher.class);
+    private static final Logger LOGGER = Logger.getLogger(PreparationAtm.class);
 
     public void process(Storage storage) {
         Service service = new Service(storage);
