@@ -21,8 +21,7 @@ public class TestStorageLoaderCSV {
     @Test
     public void testLoadStorage() throws FileNotFoundException {
         Storage actualResult = storageLoader.loadStorage();
-        Assert.assertEquals("ActualResult must be expected", createStorage().getAccountStorage(), actualResult.getAccountStorage());
-        Assert.assertEquals("ActualResult must be expected", createStorage().getCredit(), actualResult.getCredit());
+        Assert.assertEquals("ActualResult must be expected", createStorage(), actualResult);
     }
 
     public Storage createStorage() {

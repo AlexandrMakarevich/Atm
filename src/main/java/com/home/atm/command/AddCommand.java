@@ -26,7 +26,7 @@ public class AddCommand implements Command {
 		else {
 			storage.getStorage().put(currency, amount + currentValue);
 			Integer currentValue2 = storage.getStorage().get(currency);
-			String formattedString = String.format("Added %d %s . On your balance %d %s ",amount, currency, currentValue2 , currency);
+			String formattedString = String.format("Added %d %s.On your balance %d %s",amount, currency, currentValue2 , currency);
 			print(formattedString);
 		}
 	}

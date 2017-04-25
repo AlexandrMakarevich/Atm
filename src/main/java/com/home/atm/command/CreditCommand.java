@@ -46,7 +46,6 @@ public class CreditCommand implements Command {
             System.out.println(formattedString);
             LOGGER.info(formattedString);
             return;
-
     }
 
     @Override

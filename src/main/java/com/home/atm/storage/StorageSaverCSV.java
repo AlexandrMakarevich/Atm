@@ -19,19 +19,30 @@ public class StorageSaverCSV implements StorageSaver {
     public void writeData(Storage storage) throws IOException {
         File file = new File(fileName);
         PrintWriter pwt = new PrintWriter(file);
-        for (Map.Entry<String, Map<String, Integer>> map : storage.getAccountStorage().entrySet()) {
+        readStorage(storage.getCredit(), "balance", pwt);
+        readStorage(storage.getCredit(), "credit", pwt);
+        LOGGER.info(storage.getAccountStorage() + " Data save in file " + file.getAbsolutePath());
+    }
+
+    public void readStorage(Map<String, Map<String, Integer>> storage, String storageName, PrintWriter pwt) {
+        for (Map.Entry<String, Map<String, Integer>> map : storage.entrySet()) {
             StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.append(map.getKey());
-            for (Map.Entry<String, Integer> entry : map.getValue().entrySet()) {
-                stringBuilder.append(" ")
-                        .append(entry.getKey())
-                        .append(" ")
-                        .append(entry.getValue());
-            }
+            stringBuilder.append(storageName)
+                    .append(" ")
+                    .append(map.getKey());
+            readAccount(map, stringBuilder);
             stringBuilder.append("\n");
             pwt.format(stringBuilder.toString());
         }
         pwt.flush();
-        LOGGER.info(storage.getAccountStorage() + " Data save in file " + file.getAbsolutePath());
+    }
+
+    public void readAccount(Map.Entry<String, Map<String, Integer>> map, StringBuilder stringBuilder) {
+        for (Map.Entry<String, Integer> entry : map.getValue().entrySet()) {
+            stringBuilder.append(" ")
+                    .append(entry.getKey())
+                    .append(" ")
+                    .append(entry.getValue());
+        }
     }
 }

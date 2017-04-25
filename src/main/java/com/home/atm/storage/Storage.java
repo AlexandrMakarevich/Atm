@@ -5,6 +5,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Objects;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Storage {
@@ -60,4 +61,17 @@ public class Storage {
 		return creditStorage;
 	}
 
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Storage storage = (Storage) o;
+		return Objects.equals(accountStorage, storage.accountStorage) &&
+				Objects.equals(creditStorage, storage.creditStorage);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(accountStorage, creditStorage);
+	}
 }

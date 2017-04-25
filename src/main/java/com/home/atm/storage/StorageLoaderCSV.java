@@ -28,10 +28,10 @@ public class StorageLoaderCSV implements StorageLoader {
             for (int i = 2; i < result.length; i = i + 2) {
                 map1.put(result[i], Integer.valueOf(result[i + 1]));
             }
-            if (result[0].equals("balance") ) {
+            if ("balance".equals(result[0])) {
                 map.put(result[1], map1);
             }
-            if (result[0].equals("credit")) {
+            if ("credit".equals(result[0])) {
                 creditMap.put(result[1],map1);
             }
         }

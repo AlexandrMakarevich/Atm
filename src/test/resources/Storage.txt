@@ -1,4 +1,4 @@
 balance Petrov EUR 300 RUB 84844 USD 100
-credit Petrov2 RUB1 848 USD1 200
 balance Petrov2 RUB1 848 USD1 200
 credit Petrov RUB1 848 USD1 200
+credit Petrov2 RUB1 848 USD1 200

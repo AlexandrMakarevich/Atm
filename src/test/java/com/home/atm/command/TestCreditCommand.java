@@ -28,19 +28,13 @@ public class TestCreditCommand {
     @Test
     public void testTakeCreditBigger1000() throws IOException {
         creditCommand = new CreditCommand("USD", 1200);
-        creditCommand.execute(storage);
-        bo.flush();
-        String allWrittenLines = new String(bo.toByteArray());
-        Assert.assertEquals("Actual", "Sorry you can take credit not bigger than 1000 in any currency.\n\n", allWrittenLines);
+        executeAndAssert("Sorry you can take credit not bigger than 1000 in any currency.\n\n");
     }
 
     @Test
     public void testTakeFirstCredit() throws IOException {
         creditCommand = new CreditCommand("RUB", 100);
-        creditCommand.execute(storage);
-        bo.flush();
-        String allWrittenLines = new String(bo.toByteArray());
-        Assert.assertEquals("Actual", "You take credit 100 in currency RUB.\n", allWrittenLines);
+        executeAndAssert("You take credit 100 in currency RUB.\n");
     }
 
     @Test
@@ -69,5 +63,12 @@ public class TestCreditCommand {
         Integer actualResult = storage.getCreditStorage().get("USD");
         Integer expectedResult = storageStateBeforeCredit + 400;
         Assert.assertEquals("Actual result must be expected", expectedResult, actualResult);
+    }
+
+    public void executeAndAssert(String message) throws IOException {
+        creditCommand.execute(storage);
+        bo.flush();
+        String allWrittenLines = new String(bo.toByteArray());
+        Assert.assertEquals("Actual", message, allWrittenLines);
     }
 }
