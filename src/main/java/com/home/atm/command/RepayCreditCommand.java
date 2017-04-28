@@ -16,22 +16,24 @@ public class RepayCreditCommand implements  Command{
     @Override
     public void execute(Storage storage) {
         Integer currentValue = storage.getCreditStorage().get(currency);
-        if (currentValue == null) {
+        if (currentValue == null || currentValue == 0) {
             print();
             return;
         }
-        if (currentValue == 0) {
-            print();
+        if (currentValue < amount) {
+            System.out.println("You are trying to pay more than you need !");
             return;
         }
-        Integer balanceCredit = currentValue - amount;
+        Integer balanceAccount = storage.getStorage().get(currency);
+        Integer balanceCredit = balanceAccount - amount;
         if (balanceCredit < 0) {
             System.out.println("Not enough money on balance to repay the loan.");
             return;
         }
+        Integer currentCreditValue = currentValue - amount;
         storage.getStorage().put (currency, balanceCredit);
-        storage.getCreditStorage().put(currency, balanceCredit);
-        String formattedString = String.format("Removed from your credit account %d %s .On you credit balance %d %s ",amount, currency, balanceCredit, currency );
+        storage.getCreditStorage().put(currency, currentCreditValue);
+        String formattedString = String.format("Removed from your credit account %d %s .On you credit balance %d %s ",amount, currency, currentCreditValue, currency );
         System.out.println(formattedString);
     }
 

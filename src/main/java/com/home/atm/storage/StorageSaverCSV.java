@@ -19,7 +19,7 @@ public class StorageSaverCSV implements StorageSaver {
     public void writeData(Storage storage) throws IOException {
         File file = new File(fileName);
         PrintWriter pwt = new PrintWriter(file);
-        readStorage(storage.getCredit(), "balance", pwt);
+        readStorage(storage.getAccountStorage(), "balance", pwt);
         readStorage(storage.getCredit(), "credit", pwt);
         LOGGER.info(storage.getAccountStorage() + " Data save in file " + file.getAbsolutePath());
     }
