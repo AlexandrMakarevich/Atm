@@ -1,12 +1,15 @@
-package com.home.atm.command;
+package com.home.atm.command.credit;
 
+import com.home.atm.command.balance.Command;
 import com.home.atm.storage.Storage;
+import org.apache.log4j.Logger;
 import java.util.Objects;
 
-public class RepayCreditCommand implements  Command{
+public class RepayCreditCommand implements Command {
 
     private String currency;
     private int amount;
+    private static final Logger LOGGER = Logger.getLogger("CREDIT_LOGGER");
 
     public RepayCreditCommand(String currency, int amount) {
         this.currency = currency;
@@ -35,10 +38,12 @@ public class RepayCreditCommand implements  Command{
         storage.getCreditStorage().put(currency, currentCreditValue);
         String formattedString = String.format("Removed from your credit account %d %s .On you credit balance %d %s ",amount, currency, currentCreditValue, currency );
         System.out.println(formattedString);
+        LOGGER.info(formattedString);
     }
 
     public void print() {
         System.out.println("You don't have credit !");
+        LOGGER.info("You don't have credit !");
     }
 
     @Override

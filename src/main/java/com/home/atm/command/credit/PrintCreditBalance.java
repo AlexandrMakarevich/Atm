@@ -1,9 +1,14 @@
-package com.home.atm.command;
+package com.home.atm.command.credit;
 
+import com.home.atm.command.balance.Command;
 import com.home.atm.storage.Storage;
+import org.apache.log4j.Logger;
+
 import java.util.Map;
 
 public class PrintCreditBalance implements Command {
+
+    private static final Logger LOGGER = Logger.getLogger("CREDIT_LOGGER");
 
     @Override
     public void execute(Storage storage) {
@@ -19,6 +24,7 @@ public class PrintCreditBalance implements Command {
 
     public void print(String inputKey, Integer inputValue) {
         System.out.printf("Your credit balance is %d in currency %s.\n", inputValue, inputKey);
+        LOGGER.info("Your credit balance is " + inputValue + " in currency " + inputKey);
     }
 
     @Override

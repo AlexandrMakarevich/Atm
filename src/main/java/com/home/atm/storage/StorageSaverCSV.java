@@ -21,7 +21,7 @@ public class StorageSaverCSV implements StorageSaver {
         PrintWriter pwt = new PrintWriter(file);
         readStorage(storage.getAccountStorage(), "balance", pwt);
         readStorage(storage.getCredit(), "credit", pwt);
-        LOGGER.info(storage.getAccountStorage() + " Data save in file " + file.getAbsolutePath());
+        LOGGER.info("debitStorage" + storage.getAccountStorage() + "creditStorage " + storage.getCredit() + " Data save in file " + file.getAbsolutePath());
     }
 
     public void readStorage(Map<String, Map<String, Integer>> storage, String storageName, PrintWriter pwt) {

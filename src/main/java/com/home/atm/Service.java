@@ -1,6 +1,6 @@
 package com.home.atm;
 
-import com.home.atm.command.Command;
+import com.home.atm.command.balance.Command;
 import com.home.atm.parser.DelegatedInputParser;
 import com.home.atm.storage.Storage;
 import java.util.Scanner;

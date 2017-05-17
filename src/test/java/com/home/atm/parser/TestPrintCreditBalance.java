@@ -1,7 +1,7 @@
 package com.home.atm.parser;
 
-import com.home.atm.command.Command;
-import com.home.atm.command.PrintCreditBalance;
+import com.home.atm.command.balance.Command;
+import com.home.atm.command.credit.PrintCreditBalance;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;

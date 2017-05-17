@@ -1,4 +1,4 @@
-package com.home.atm.command;
+package com.home.atm.command.balance;
 
 import com.home.atm.storage.Storage;
 import org.apache.log4j.Logger;
@@ -8,7 +8,7 @@ import java.util.Objects;
 public class PrintBalanceCommand implements Command {
 
     private String currency;
-    private static final Logger LOGGER = Logger.getLogger(PrintBalanceCommand.class);
+    private static final Logger LOGGER = Logger.getLogger("DEBIT_LOGGER");
 
     public PrintBalanceCommand(String currency) {
         this.currency = currency;

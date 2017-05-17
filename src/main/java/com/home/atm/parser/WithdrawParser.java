@@ -1,7 +1,7 @@
 package com.home.atm.parser;
 
-import com.home.atm.command.Command;
-import com.home.atm.command.WithdrawCommand;
+import com.home.atm.command.balance.Command;
+import com.home.atm.command.balance.WithdrawCommand;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

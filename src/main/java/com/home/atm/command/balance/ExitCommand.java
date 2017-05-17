@@ -1,4 +1,4 @@
-package com.home.atm.command;
+package com.home.atm.command.balance;
 
 import com.home.atm.storage.Storage;
 import com.home.atm.storage.StorageSaverFactory;
@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class ExitCommand implements Command {
 
-    private static final Logger LOGGER = Logger.getLogger(ExitCommand.class);
+    private static final Logger LOGGER = Logger.getLogger("DEBIT_LOGGER");
     private StorageSaverFactory storageSaverFactory;
 
     public ExitCommand() {

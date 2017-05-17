@@ -1,4 +1,4 @@
-package com.home.atm.command;
+package com.home.atm.command.balance;
 
 import com.home.atm.storage.Storage;
 import org.apache.log4j.Logger;
@@ -8,7 +8,7 @@ public class WithdrawCommand implements Command {
 
     private String currency;
     private int amount;
-    private static final Logger LOGGER = Logger.getLogger(WithdrawCommand.class);
+    private static final Logger LOGGER = Logger.getLogger("DEBIT_LOGGER");
 
     public WithdrawCommand(String currency, int amount) {
         this.currency = currency;

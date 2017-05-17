@@ -1,4 +1,4 @@
-package com.home.atm.command;
+package com.home.atm.command.balance;
 
 import com.home.atm.storage.Storage;
 

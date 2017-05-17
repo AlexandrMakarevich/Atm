@@ -1,5 +1,6 @@
-package com.home.atm.command;
+package com.home.atm.command.credit;
 
+import com.home.atm.command.balance.Command;
 import com.home.atm.storage.Storage;
 import org.apache.log4j.Logger;
 import java.util.Objects;
@@ -8,7 +9,7 @@ public class CreditCommand implements Command {
 
     private String currency;
     private int amount;
-    private static final Logger LOGGER = Logger.getLogger(CreditCommand.class);
+    private static final Logger LOGGER = Logger.getLogger("CREDIT_LOGGER");
 
     public CreditCommand(String currency, int amount) {
         this.currency = currency;

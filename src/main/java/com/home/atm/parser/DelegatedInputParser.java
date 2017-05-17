@@ -1,6 +1,6 @@
 package com.home.atm.parser;
 
-import com.home.atm.command.Command;
+import com.home.atm.command.balance.Command;
 import java.util.ArrayList;
 import java.util.List;
 
