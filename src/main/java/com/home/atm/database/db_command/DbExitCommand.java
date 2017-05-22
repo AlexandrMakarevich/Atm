@@ -9,4 +9,17 @@ public class DbExitCommand implements DbCommand{
         System.out.println("Get command close.");
         System.exit(0);
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        return true;
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
+
 }

@@ -31,14 +31,14 @@ public class TestDbAddCommand {
 
     @Test
     public void testAddCommand() throws SQLException {
-        cleanTable("debit");
+        cleanTable(connection, "debit");
         dbAddCommand.executeDb(accountId);
         Optional<Integer> data = getDataTable();
         int expectedResult = data.get();
         Assert.assertEquals("Actual result must be expected", expectedResult, amount);
     }
 
-    public void cleanTable(String... tables) throws SQLException{
+    public void cleanTable(Connection connection, String... tables) throws SQLException{
         Statement statement = connection.createStatement();
         for (String table : tables) {
             statement.executeUpdate("truncate table " + table);

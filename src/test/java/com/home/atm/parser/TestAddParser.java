@@ -5,10 +5,9 @@ import com.home.atm.command.balance.Command;
 import org.junit.Assert;
 import org.junit.Test;
 
-
 public class TestAddParser extends AbstractInputParserTest{
 
-    AddParser addParser =  new AddParser();
+    private AddParser addParser =  new AddParser();
 
     public void executeAndAssert(String inputString, Command expectedResult) {
         Command actualResult = addParser.parseInput(inputString);

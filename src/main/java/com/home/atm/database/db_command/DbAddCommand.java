@@ -1,5 +1,6 @@
 package com.home.atm.database.db_command;
 
+import com.google.common.base.Objects;
 import com.home.atm.database.DataSource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -35,5 +36,19 @@ public class DbAddCommand implements DbCommand {
         prepStatement.executeUpdate();
         prepStatement.close();
         connection.close();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        DbAddCommand that = (DbAddCommand) o;
+        return amount == that.amount &&
+                Objects.equal(currency, that.currency);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(currency, amount);
     }
 }
