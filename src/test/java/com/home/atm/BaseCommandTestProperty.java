@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.Test;
 import java.io.IOException;
 
-public class TestLoaderProperty {
+public class BaseCommandTestProperty {
 
     private LoaderProperty loaderProperty;
     private String expectedStorageType = "json";

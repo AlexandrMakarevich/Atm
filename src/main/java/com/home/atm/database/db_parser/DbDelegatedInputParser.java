@@ -13,6 +13,7 @@ public class DbDelegatedInputParser {
         inputParsers.add(new DbPrintParser());
         inputParsers.add(new DbExitParser());
         inputParsers.add(new DbAddParser());
+        inputParsers.add(new DbWithdrawParser());
     }
 
     public DbCommand defaultParseInput(String inputString) {
