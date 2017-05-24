@@ -1,4 +1,4 @@
-package com.home.atm.dbParser;
+package database.db_parser;
 
 import com.home.atm.database.db_parser.DbInputParser;
 import org.junit.Rule;

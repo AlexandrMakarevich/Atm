@@ -2,6 +2,7 @@ package com.home.atm.database.db_command;
 
 import com.google.common.base.Objects;
 import com.home.atm.database.DataSource;
+import org.apache.log4j.Logger;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -11,6 +12,7 @@ public class DbAddCommand implements DbCommand {
     private Connection connection;
     private String currency;
     private int amount;
+    private static final Logger LOGGER = Logger.getLogger(DbAddCommand.class);
 
     public DbAddCommand(String currency, int amount) {
         this.currency = currency;
@@ -36,6 +38,9 @@ public class DbAddCommand implements DbCommand {
         prepStatement.executeUpdate();
         prepStatement.close();
         connection.close();
+        String formattedString = String.format("Added %d in currency %s.", amount, currency);
+        System.out.println(formattedString);
+        LOGGER.info(formattedString);
     }
 
     @Override

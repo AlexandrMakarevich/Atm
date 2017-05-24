@@ -1,12 +1,17 @@
 package com.home.atm.database.db_command;
 
+import org.apache.log4j.Logger;
+
 import java.sql.SQLException;
 
 public class DbExitCommand implements DbCommand{
 
+    private static final Logger LOGGER = Logger.getLogger(DbExitCommand.class);
+
     @Override
     public void executeDb(int accountName) throws SQLException {
         System.out.println("Get command close.");
+        LOGGER.info("Get command close.");
         System.exit(0);
     }
 

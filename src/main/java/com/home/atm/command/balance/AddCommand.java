@@ -8,7 +8,7 @@ public class AddCommand implements Command {
 
 	private String currency;
 	private int amount;
-	private static final Logger LOGGER = Logger.getLogger("DEBIT_LOGGER");
+	private static final Logger LOGGER = Logger.getLogger(AddCommand.class);
 	
 	public AddCommand(String currency, int amount) {
 		this.currency = currency;

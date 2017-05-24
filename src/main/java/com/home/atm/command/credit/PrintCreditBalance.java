@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class PrintCreditBalance implements Command {
 
-    private static final Logger LOGGER = Logger.getLogger("CREDIT_LOGGER");
+    private static final Logger LOGGER = Logger.getLogger(PrintCreditBalance.class);
 
     @Override
     public void execute(Storage storage) {

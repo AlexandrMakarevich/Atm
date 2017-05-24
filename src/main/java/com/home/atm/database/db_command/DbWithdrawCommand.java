@@ -3,6 +3,7 @@ package com.home.atm.database.db_command;
 import com.google.common.base.Objects;
 import com.google.common.base.Optional;
 import com.home.atm.database.DataSource;
+import org.apache.log4j.Logger;
 import java.sql.*;
 
 public class DbWithdrawCommand implements DbCommand {
@@ -10,6 +11,7 @@ public class DbWithdrawCommand implements DbCommand {
     private String currency;
     private int amount;
     private Connection connection;
+    private static final Logger LOGGER = Logger.getLogger(DbWithdrawCommand.class);
 
     public DbWithdrawCommand(String currency, int amount) {
         this.currency = currency;
@@ -21,24 +23,29 @@ public class DbWithdrawCommand implements DbCommand {
     @Override
     public void executeDb(int accountName) throws SQLException {
         Optional<Integer> currencyExist = checkCurrency(connection, currency);
-        if (! currencyExist.isPresent()) {
+        if (!currencyExist.isPresent()) {
             System.out.println("You don't have money on currency " + currency);
+            LOGGER.info("You don't have money on currency " + currency);
             return;
         }
         connection.setAutoCommit(false);
-        int balance = getBalance(accountName, currencyExist);
+        int balance = getBalance(accountName, currencyExist.get());
         if ((balance - amount) < 0) {
             System.out.println("Not enough money on the account!");
+            LOGGER.info("Not enough money on the account!");
             connection.rollback();
             connection.close();
             return;
         }
-            withdrowProcesss(currencyExist.get(), accountName);
-            connection.commit();
-            connection.close();
+        withdrawProcesss(currencyExist.get(), accountName);
+        connection.commit();
+        connection.close();
+        String formattedString = String.format("Removed from your account %d %s.", amount, currency);
+        System.out.println(formattedString);
+        LOGGER.info(formattedString);
     }
 
-    public void withdrowProcesss(int currencyId, int accountName) throws SQLException {
+    public void withdrawProcesss(int currencyId, int accountName) throws SQLException {
         String query = "update debit set balance = balance - ? " +
                 "where account_id = ? and currency_id = ?";
         PreparedStatement prepStatement = connection.prepareStatement(query);
@@ -49,17 +56,19 @@ public class DbWithdrawCommand implements DbCommand {
         prepStatement.close();
     }
 
-    private int getBalance(int accountName, Optional<Integer> currencyExist) throws SQLException {
+    public int getBalance(int accountName, int currencyExist) throws SQLException {
         String query = "select balance from debit " +
                 "where account_id = ? and currency_id = ? for update";
         PreparedStatement prepStatement = connection.prepareStatement(query);
         prepStatement.setInt(1, accountName);
-        prepStatement.setInt(2, currencyExist.get());
+        prepStatement.setInt(2, currencyExist);
         ResultSet resultSet = prepStatement.executeQuery();
         if (resultSet.next()) {
             return resultSet.getInt(1);
         }
-        System.out.println("You don't have money on this " + currency);
+        System.out.println("You don't have money on currency " + currency);
+        LOGGER.warn("You don't have money on currency " + currency);
+        connection.close();
         throw new IllegalStateException("You don't have money on this currency!");
     }
 
@@ -68,7 +77,7 @@ public class DbWithdrawCommand implements DbCommand {
         PreparedStatement prepStatement = connection.prepareStatement(query);
         prepStatement.setString(1, currencyInput);
         ResultSet resultSet = prepStatement.executeQuery();
-        while (resultSet.next()) {
+        if (resultSet.next()) {
             return Optional.of(resultSet.getInt(1));
         }
         return Optional.absent();

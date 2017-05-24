@@ -8,7 +8,7 @@ public class WithdrawCommand implements Command {
 
     private String currency;
     private int amount;
-    private static final Logger LOGGER = Logger.getLogger("DEBIT_LOGGER");
+    private static final Logger LOGGER = Logger.getLogger(WithdrawCommand.class);
 
     public WithdrawCommand(String currency, int amount) {
         this.currency = currency;

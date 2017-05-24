@@ -8,7 +8,7 @@ import java.util.Objects;
 public class PrintBalanceCommand implements Command {
 
     private String currency;
-    private static final Logger LOGGER = Logger.getLogger("DEBIT_LOGGER");
+    private static final Logger LOGGER = Logger.getLogger(PrintBalanceCommand.class);
 
     public PrintBalanceCommand(String currency) {
         this.currency = currency;

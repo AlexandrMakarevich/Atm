@@ -1,4 +1,4 @@
-package com.home.atm.dbCommand;
+package database.db_command;
 
 import com.home.atm.database.db_command.DbAddCommand;
 import com.home.atm.database.db_command.DbPrintBalance;
@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.sql.SQLException;
 
-public class TestDbPrintBalance extends BaseCommandTest {
+public class IntTestDbPrintBalance extends BaseCommandTest {
 
     private DbPrintBalance dbPrintBalance;
     private DbAddCommand dbAddCommand;

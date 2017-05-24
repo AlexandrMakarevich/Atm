@@ -9,7 +9,7 @@ public class CreditCommand implements Command {
 
     private String currency;
     private int amount;
-    private static final Logger LOGGER = Logger.getLogger("CREDIT_LOGGER");
+    private static final Logger LOGGER = Logger.getLogger(CreditCommand.class);
 
     public CreditCommand(String currency, int amount) {
         this.currency = currency;
