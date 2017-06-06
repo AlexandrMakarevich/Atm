@@ -1,52 +1,64 @@
 package com.home.atm.database.db_command;
 
 import com.home.atm.database.DataSource;
+import com.home.atm.database_spring.PrintBalanceService;
 import org.apache.log4j.Logger;
+import org.springframework.jdbc.core.ResultSetExtractor;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.jdbc.core.namedparam.SqlParameterSource;
+import org.springframework.stereotype.Repository;
 
+import javax.annotation.Resource;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
+import java.util.Map;
 
+@Repository("dbPrintBalance")
 public class DbPrintBalance implements DbCommand {
 
-    private Connection connection;
+    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+
     private static final Logger LOGGER = Logger.getLogger(DbPrintBalance.class);
 
+    @Resource
+    public void setNamedParameterJdbcTemplate(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
+        this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
+    }
+
     public DbPrintBalance() {
-        DataSource dataSource = new DataSource();
-        connection = dataSource.getConnection();
+    }
+
+    public DbPrintBalance(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
+        this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
     }
 
     @Override
     public void executeDb(int accountId) throws SQLException {
-        String query = "select account_name,currency_name,balance" +
+        String query = "select currency_name cn,balance b" +
                 " from debit d inner join account a on a.id = d.account_id" +
                 " inner join currency c on c.id = d.currency_id" +
-                " where d.account_id = ?";
-        PreparedStatement prepStatement = connection.prepareStatement(query);
-        prepStatement.setInt(1, accountId);
-        ResultSet resultSet = prepStatement.executeQuery();
-        while (resultSet.next()) {
-            String formattedString = String.format("Your balance is %d in currency %s.\n",
-                    resultSet.getInt(3), resultSet.getString(2));
-            System.out.printf(formattedString);
-            LOGGER.info(formattedString);
+                " where d.account_id = :p_account_id";
+        SqlParameterSource namedParameters = new MapSqlParameterSource("p_account_id", accountId);
+        List<PrintBalanceService> accountBalance = namedParameterJdbcTemplate.query(query, namedParameters, new RowMapper<PrintBalanceService>() {
+            @Override
+            public PrintBalanceService mapRow(ResultSet rs, int rowNum) throws SQLException {
+                return new PrintBalanceService(rs.getString("cn"), rs.getInt("b"));
+            }
+        });
+
+        if (accountBalance.isEmpty()) {
+            System.out.println("You don't have money on balance");
+            return;
         }
-        resultSet.close();
-        prepStatement.close();
-        connection.close();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        return 0;
+        for (PrintBalanceService balanceService : accountBalance) {
+            String formattedString = String.format("Your balance is %d in currency %s.\n", balanceService.getBalance(),
+                    balanceService.getCurrency());
+            System.out.println(formattedString);
+        }
     }
 }

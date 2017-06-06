@@ -2,10 +2,19 @@ package com.home.atm.database;
 
 import com.home.atm.database.db_command.DbCommand;
 import com.home.atm.database.db_parser.DbDelegatedInputParser;
+import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 import java.sql.SQLException;
 import java.util.Scanner;
 
+@Service("dbService")
 public class DbService {
+
+    @Resource(name = "dbDelegatedInputParser")
+    public void setDbInputParser(DbDelegatedInputParser dbInputParser) {
+        this.dbInputParser = dbInputParser;
+    }
 
     private DbDelegatedInputParser dbInputParser = new DbDelegatedInputParser();
 
