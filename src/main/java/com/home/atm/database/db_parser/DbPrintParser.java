@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-@Service("dbInputParser")
+@Service("dbPrintParser")
 public class DbPrintParser implements DbInputParser {
 
     private Pattern dbPrintPattern = Pattern.compile("^balance$");

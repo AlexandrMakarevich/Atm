@@ -19,7 +19,7 @@
     </bean>
 
     <util:list id="listOfParsers" value-type="com.home.atm.parser.InputParser">
-        <ref bean="dbInputParser"/>
+        <ref bean="dbPrintParser"/>
     </util:list>
 
 </beans>

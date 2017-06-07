@@ -3,7 +3,6 @@ package com.home.atm.database_spring;
 import com.home.atm.database.DbServiceAccount;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 import java.sql.SQLException;
 
 public class AtmSpringLauncher {
