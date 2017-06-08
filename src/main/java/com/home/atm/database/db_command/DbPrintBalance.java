@@ -56,7 +56,7 @@ public class DbPrintBalance implements DbCommand {
             return;
         }
         for (PrintBalanceService balanceService : accountBalance) {
-            String formattedString = String.format("Your balance is %d in currency %s.\n", balanceService.getBalance(),
+            String formattedString = String.format("Your balance is %d in currency %s.", balanceService.getBalance(),
                     balanceService.getCurrency());
             System.out.println(formattedString);
         }

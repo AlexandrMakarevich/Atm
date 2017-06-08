@@ -8,12 +8,10 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
-
 import javax.annotation.Resource;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -47,7 +45,7 @@ public class TestDbPrintBalance extends BaseCommandTest {
         insertBalance(accountId, currencyId, balance);
         ByteArrayOutputStream baos = new ByteArrayOutputStream();
         System.setOut(new PrintStream(baos));
-        dbCommand.executeDb(1);
+        dbCommand.executeDb(accountId);
         baos.flush();
         String expectedResult = String.format("Your balance is %d in currency %s.\n", balance, currencyName);
         String actualResult = new String(baos.toByteArray());
@@ -55,11 +53,15 @@ public class TestDbPrintBalance extends BaseCommandTest {
     }
 
     private void insertBalance(int accountId, int currencyId, int balance) {
-        String query = "insert into debit(account_id, currency_id, balance) values(:p_account_id, :p_currency_id, :p_balance)";
+        String query = "insert into debit(account_id, currency_id, balance) " +
+                "values(:p_account_id, :p_currency_id, :p_balance)";
         MapSqlParameterSource namedParameters = new MapSqlParameterSource();
         namedParameters.addValue("p_account_id", accountId);
         namedParameters.addValue("p_currency_id", currencyId);
         namedParameters.addValue("p_balance", balance);
-        namedParameterJdbcTemplate.update(query, namedParameters);
+        int rowCount = namedParameterJdbcTemplate.update(query, namedParameters);
+        if (rowCount == 0) {
+            throw new IllegalStateException("No column has been changed!");
+        }
     }
 }
