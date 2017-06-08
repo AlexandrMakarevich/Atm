@@ -16,10 +16,10 @@ public class IntTestDbAddCommand extends BaseCommandTest {
     private int accountId = 1;
     private static final Logger LOGGER = Logger.getLogger("TEST_LOGGER");
 
-    @Before
-    public void init() throws IOException {
-        dbAddCommand = new DbAddCommand(currency, amount);
-    }
+//    @Before
+//    public void init() throws IOException {
+//        dbAddCommand = new DbAddCommand(currency, amount);
+//    }
 
 //    @Test
 //    public void testAddCommand() throws SQLException {

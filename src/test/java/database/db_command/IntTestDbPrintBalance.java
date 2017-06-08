@@ -18,21 +18,21 @@ public class IntTestDbPrintBalance extends BaseCommandTest {
     private int amount = 20;
     private int accountId = 1;
 
-    @Before
-    public void init() throws IOException{
-        dbAddCommand = new DbAddCommand(currency, amount);
-        dbPrintBalance = new DbPrintBalance();
-    }
-
-    @Test
-    public void testDbPrintBalance() throws SQLException, IOException{
-        cleanTable("debit");
-        dbAddCommand.executeDb(accountId);
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(baos));
-        dbPrintBalance.executeDb(accountId);
-        baos.flush();
-        String actualResult = new String(baos.toByteArray());
-        Assert.assertEquals("Actual", "Your balance is 20 in currency rub.\n", actualResult);
-    }
+//    @Before
+//    public void init() throws IOException{
+//        dbAddCommand = new DbAddCommand(currency, amount);
+//        dbPrintBalance = new DbPrintBalance();
+//    }
+//
+//    @Test
+//    public void testDbPrintBalance() throws SQLException, IOException{
+//        cleanTable("debit");
+//        dbAddCommand.executeDb(accountId);
+//        ByteArrayOutputStream baos = new ByteArrayOutputStream();
+//        System.setOut(new PrintStream(baos));
+//        dbPrintBalance.executeDb(accountId);
+//        baos.flush();
+//        String actualResult = new String(baos.toByteArray());
+//        Assert.assertEquals("Actual", "Your balance is 20 in currency rub.\n", actualResult);
+//    }
 }

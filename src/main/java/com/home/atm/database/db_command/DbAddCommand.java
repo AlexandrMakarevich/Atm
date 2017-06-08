@@ -1,43 +1,43 @@
 package com.home.atm.database.db_command;
 
-import com.google.common.base.Objects;
-import com.home.atm.database.DataSource;
 import org.apache.log4j.Logger;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.sql.SQLException;
 
 public class DbAddCommand implements DbCommand {
 
-    private Connection connection;
+    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
     private String currency;
     private int amount;
     private static final Logger LOGGER = Logger.getLogger(DbAddCommand.class);
 
-    public DbAddCommand(String currency, int amount) {
+    public DbAddCommand(NamedParameterJdbcTemplate namedParameterJdbcTemplate, String currency, int amount) {
+        this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
         this.currency = currency;
         this.amount = amount;
-        DataSource dataSource = new DataSource();
-        connection = dataSource.getConnection();
     }
 
     @Override
     public void executeDb(int accountId) throws SQLException {
         String query = " insert into debit(account_id, currency_id, balance) "+
-        "select ? account_id, c.id, IFNULL(d.balance,?) "+
+        "select :p_account_id account_id, c.id, IFNULL(d.balance,:p_balance) "+
         "from currency c "+
         "left join debit d "+
         "on d.currency_id = c.id "+
-        "where c.currency_name = ? "+
-        "ON DUPLICATE KEY UPDATE balance = d.balance + ?";
-        PreparedStatement prepStatement = connection.prepareStatement(query);
-        prepStatement.setInt(1, accountId);
-        prepStatement.setInt(2, amount);
-        prepStatement.setString(3, currency);
-        prepStatement.setInt(4,amount);
-        prepStatement.executeUpdate();
-        prepStatement.close();
-        connection.close();
+        "where c.currency_name = :p_currency_name "+
+        "ON DUPLICATE KEY UPDATE balance = d.balance + :p_balance";
+        MapSqlParameterSource namedParameters = new MapSqlParameterSource();
+        namedParameters.addValue("p_account_id", accountId);
+        namedParameters.addValue("p_balance", amount);
+        namedParameters.addValue("p_currency_name", currency);
+        namedParameters.addValue("p_balance", amount);
+        int rowCount = namedParameterJdbcTemplate.update(query, namedParameters);
+        if (rowCount == 0) {
+            throw new IllegalStateException("No column has been changed !");
+        }
         String formattedString = String.format("Added %d in currency %s.", amount, currency);
         System.out.println(formattedString);
         LOGGER.info(formattedString);
@@ -49,11 +49,12 @@ public class DbAddCommand implements DbCommand {
         if (o == null || getClass() != o.getClass()) return false;
         DbAddCommand that = (DbAddCommand) o;
         return amount == that.amount &&
-                Objects.equal(currency, that.currency);
+                java.util.Objects.equals(currency, that.currency);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(currency, amount);
+        return java.util.Objects.hash(currency, amount);
     }
+
 }

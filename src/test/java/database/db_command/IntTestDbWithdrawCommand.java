@@ -33,21 +33,21 @@ public class IntTestDbWithdrawCommand extends BaseCommandTest {
     @Rule
     public ExpectedException testRuleException = ExpectedException.none();
 
-    @Test
-    public void testNotEnoughMoney() throws SQLException, IOException {
-        int addAmount = 40;
-        int withdrawAmount = 150;
-        dbAddCommand = new DbAddCommand(currency, addAmount);
-        dbAddCommand.executeDb(accountId);
-        dbWithdrawCommand = new DbWithdrawCommand(currency, withdrawAmount);
-        String expectedResult = "Not enough money on the account!\n";
-        ByteArrayOutputStream bo = new ByteArrayOutputStream();
-        System.setOut(new PrintStream(bo));
-        dbWithdrawCommand.executeDb(accountId);
-        bo.flush();
-        String actualResult = new String(bo.toByteArray());
-        Assert.assertEquals("Actual result must be expected", expectedResult, actualResult);
-    }
+//    @Test
+//    public void testNotEnoughMoney() throws SQLException, IOException {
+//        int addAmount = 40;
+//        int withdrawAmount = 150;
+//        dbAddCommand = new DbAddCommand(currency, addAmount);
+//        dbAddCommand.executeDb(accountId);
+//        dbWithdrawCommand = new DbWithdrawCommand(currency, withdrawAmount);
+//        String expectedResult = "Not enough money on the account!\n";
+//        ByteArrayOutputStream bo = new ByteArrayOutputStream();
+//        System.setOut(new PrintStream(bo));
+//        dbWithdrawCommand.executeDb(accountId);
+//        bo.flush();
+//        String actualResult = new String(bo.toByteArray());
+//        Assert.assertEquals("Actual result must be expected", expectedResult, actualResult);
+//    }
 
     @Test
     public void testWhereCurrencyNotExist() throws SQLException, IOException {

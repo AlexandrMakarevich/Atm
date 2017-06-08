@@ -2,9 +2,12 @@ package com.home.atm.database.db_parser;
 
 import com.home.atm.database.db_command.DbCommand;
 import com.home.atm.database.db_command.DbExitCommand;
+import org.springframework.stereotype.Service;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Service("dbExitParser")
 public class DbExitParser implements  DbInputParser {
 
     private Pattern exitPattern = Pattern.compile("^exit$");

@@ -2,12 +2,25 @@ package com.home.atm.database.db_parser;
 
 import com.home.atm.database.db_command.DbAddCommand;
 import com.home.atm.database.db_command.DbCommand;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@Service("dbAddParser")
+@Transactional
 public class DbAddParser implements DbInputParser{
 
     private Pattern dbAddPattern = Pattern.compile("^\\+ ([a-z]{3}) ([0-9]{1,10})$");
+    private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+
+    @Autowired
+    public void setNamedParameterJdbcTemplate(NamedParameterJdbcTemplate namedParameterJdbcTemplate) {
+        this.namedParameterJdbcTemplate = namedParameterJdbcTemplate;
+    }
 
     @Override
     public boolean commandMatch(String inputString) {
@@ -21,7 +34,7 @@ public class DbAddParser implements DbInputParser{
         if(dbAdd.matches()) {
             String currency = dbAdd.group(1);
             Integer amount = Integer.parseInt(dbAdd.group(2));
-            return new DbAddCommand(currency, amount);
+            return new DbAddCommand(namedParameterJdbcTemplate, currency, amount);
         }
         throw new IllegalArgumentException("Wrong command : " + inputString );
     }

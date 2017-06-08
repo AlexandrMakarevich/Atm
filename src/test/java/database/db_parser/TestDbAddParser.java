@@ -22,10 +22,10 @@ public class TestDbAddParser extends DbAbstractInputParserTest {
         loaderProperty.loadProperty();
     }
 
-    @Test
-    public void testDbAddRub10() {
-        createCommand("+ rub 10", new DbAddCommand("rub", 10));
-    }
+//    @Test
+//    public void testDbAddRub10() {
+//        createCommand("+ rub 10", new DbAddCommand("rub", 10));
+//    }
 
     public void createCommand(String inputCommand, DbCommand expectedResult) {
         DbCommand actualResult = dbAddParser.parseInput(inputCommand);

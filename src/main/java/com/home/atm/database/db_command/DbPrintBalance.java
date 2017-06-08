@@ -1,22 +1,16 @@
 package com.home.atm.database.db_command;
 
-import com.home.atm.database.DataSource;
 import com.home.atm.database_spring.PrintBalanceService;
 import org.apache.log4j.Logger;
-import org.springframework.jdbc.core.ResultSetExtractor;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
 import org.springframework.stereotype.Repository;
-
 import javax.annotation.Resource;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
-import java.util.Map;
 
 @Repository("dbPrintBalance")
 public class DbPrintBalance implements DbCommand {

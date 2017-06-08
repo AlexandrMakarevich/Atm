@@ -13,7 +13,5 @@ public class AtmSpringLauncher {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext(configs);
         DbServiceAccount dbServiceAccount = (DbServiceAccount) applicationContext.getBean("dbServiceAccount");
         dbServiceAccount.launchAccount();
-//        Currency currency = currencyDao.findCurrencyByName("usd");
-//        System.out.println(currency);
     }
 }
