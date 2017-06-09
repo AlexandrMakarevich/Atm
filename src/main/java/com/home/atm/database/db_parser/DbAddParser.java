@@ -11,7 +11,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 @Service("dbAddParser")
-@Transactional
 public class DbAddParser implements DbInputParser{
 
     private Pattern dbAddPattern = Pattern.compile("^\\+ ([a-z]{3}) ([0-9]{1,10})$");

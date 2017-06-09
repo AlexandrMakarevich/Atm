@@ -3,8 +3,6 @@ package com.home.atm.database.db_command;
 import org.apache.log4j.Logger;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.transaction.annotation.Transactional;
-
 import java.sql.SQLException;
 
 public class DbAddCommand implements DbCommand {

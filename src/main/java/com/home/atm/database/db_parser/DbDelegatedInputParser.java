@@ -2,7 +2,6 @@ package com.home.atm.database.db_parser;
 
 import com.home.atm.database.db_command.DbCommand;
 import org.springframework.stereotype.Service;
-
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;

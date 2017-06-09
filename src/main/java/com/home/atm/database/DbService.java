@@ -3,12 +3,13 @@ package com.home.atm.database;
 import com.home.atm.database.db_command.DbCommand;
 import com.home.atm.database.db_parser.DbDelegatedInputParser;
 import org.springframework.stereotype.Service;
-
+import org.springframework.transaction.annotation.Transactional;
 import javax.annotation.Resource;
 import java.sql.SQLException;
 import java.util.Scanner;
 
 @Service("dbService")
+@Transactional
 public class DbService {
 
     @Resource(name = "dbDelegatedInputParser")

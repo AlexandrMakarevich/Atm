@@ -16,7 +16,6 @@ import java.util.List;
 public class DbPrintBalance implements DbCommand {
 
     private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
-
     private static final Logger LOGGER = Logger.getLogger(DbPrintBalance.class);
 
     @Resource
@@ -53,6 +52,7 @@ public class DbPrintBalance implements DbCommand {
             String formattedString = String.format("Your balance is %d in currency %s.", balanceService.getBalance(),
                     balanceService.getCurrency());
             System.out.println(formattedString);
+            LOGGER.info(formattedString);
         }
     }
 }
