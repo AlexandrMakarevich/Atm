@@ -3,7 +3,6 @@ package com.home.atm.database_spring;
 import com.google.common.base.Optional;
 import com.home.atm.database.Account;
 import com.home.atm.database.AccountDao;
-import database.db_command.BaseCommandTest;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

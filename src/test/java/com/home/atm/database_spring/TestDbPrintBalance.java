@@ -1,12 +1,10 @@
 package com.home.atm.database_spring;
 
 import com.home.atm.database.db_command.DbCommand;
-import database.db_command.BaseCommandTest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.ContextConfiguration;
@@ -50,18 +48,5 @@ public class TestDbPrintBalance extends BaseCommandTest {
         String expectedResult = String.format("Your balance is %d in currency %s.\n", balance, currencyName);
         String actualResult = new String(baos.toByteArray());
         Assert.assertEquals("Actual result must be expected ", expectedResult, actualResult);
-    }
-
-    private void insertBalance(int accountId, int currencyId, int balance) {
-        String query = "insert into debit(account_id, currency_id, balance) " +
-                "values(:p_account_id, :p_currency_id, :p_balance)";
-        MapSqlParameterSource namedParameters = new MapSqlParameterSource();
-        namedParameters.addValue("p_account_id", accountId);
-        namedParameters.addValue("p_currency_id", currencyId);
-        namedParameters.addValue("p_balance", balance);
-        int rowCount = namedParameterJdbcTemplate.update(query, namedParameters);
-        if (rowCount == 0) {
-            throw new IllegalStateException("No column has been changed!");
-        }
     }
 }

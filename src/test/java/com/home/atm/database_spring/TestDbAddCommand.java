@@ -1,7 +1,6 @@
 package com.home.atm.database_spring;
 
 import com.home.atm.database.db_command.DbAddCommand;
-import database.db_command.BaseCommandTest;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Rule;

@@ -28,6 +28,7 @@
         <ref bean="dbPrintParser"/>
         <ref bean="dbAddParser"/>
         <ref bean="dbExitParser"/>
+        <ref bean="dbWithdrawParser"/>
     </util:list>
 
 </beans>

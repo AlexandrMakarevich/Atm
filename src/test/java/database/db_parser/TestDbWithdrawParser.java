@@ -22,10 +22,10 @@ public class TestDbWithdrawParser extends DbAbstractInputParserTest{
         loaderProperty.loadProperty();
     }
 
-    @Test
-    public void testDbWithdrawCommand() {
-        createCommand("- usd 10", new DbWithdrawCommand("usd", 10));
-    }
+//    @Test
+//    public void testDbWithdrawCommand() {
+//        createCommand("- usd 10", new DbWithdrawCommand("usd", 10));
+//    }
 
     public void createCommand(String inputCommand, DbCommand expectedResult) {
         DbCommand actualResult = dbWithdrawParser.parseInput(inputCommand);

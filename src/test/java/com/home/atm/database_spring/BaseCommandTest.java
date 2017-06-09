@@ -1,4 +1,4 @@
-package database.db_command;
+package com.home.atm.database_spring;
 
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -28,5 +28,18 @@ public class BaseCommandTest {
             throw new IllegalStateException("No column has been changed!");
         }
         return keyHolder.getKey().intValue();
+    }
+
+    public void insertBalance(int accountId, int currencyId, int balance) {
+        String query = "insert into debit(account_id, currency_id, balance) " +
+                "values(:p_account_id, :p_currency_id, :p_balance)";
+        MapSqlParameterSource namedParameters = new MapSqlParameterSource();
+        namedParameters.addValue("p_account_id", accountId);
+        namedParameters.addValue("p_currency_id", currencyId);
+        namedParameters.addValue("p_balance", balance);
+        int rowCount = namedParameterJdbcTemplate.update(query, namedParameters);
+        if (rowCount == 0) {
+            throw new IllegalStateException("No column has been changed!");
+        }
     }
 }
