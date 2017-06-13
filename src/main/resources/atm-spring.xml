@@ -16,6 +16,13 @@
         <property name="password" value="${password}"/>
     </bean>
 
+    <bean id="autoPatcher" class="com.tacitknowledge.util.migration.jdbc.AutoPatchService" init-method="patch">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="patchPath" value="db_scripts"/>
+        <property name="systemName" value="atm_user"/>
+        <property name="databaseType" value="mysql"/>
+    </bean>
+
     <bean id="namedParameterJdbcTemplate" class="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate">
         <constructor-arg name="dataSource" ref="dataSource"/>
     </bean>
